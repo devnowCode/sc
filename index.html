@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stefano Carrara - IT Professional & Cybersecurity Expert</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'cyber': ['Orbitron', 'monospace'],
+                    },
+                    colors: {
+                        'primary': '#1e3a8a',
+                        'secondary': '#3b82f6',
+                        'accent': '#dc2626',
+                        'cyber-red': '#ff0000',
+                        'cyber-green': '#00ff00',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .cyber-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+        }
+        .tech-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .matrix-bg {
+            background-image: url('assets/images/matrix-code-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.1), 0 10px 10px -5px rgba(220, 38, 38, 0.04);
+        }
+        .skill-bar {
+            transition: width 2s ease-in-out;
+        }
+        .timeline-item {
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 0.6s ease forwards;
+        }
+        .timeline-item:nth-child(even) {
+            transform: translateX(50px);
+        }
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-text {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .cyber-glow {
+            box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
+        }
+        .cyber-border {
+            border: 2px solid #dc2626;
+            position: relative;
+        }
+        .cyber-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #dc2626, transparent, #dc2626);
+            z-index: -1;
+            border-radius: inherit;
+        }
+        .glitch-text {
+            position: relative;
+            color: #fff;
+            font-weight: 900;
+        }
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch-text::before {
+            animation: glitch-anim-1 0.5s infinite linear alternate-reverse;
+            color: #dc2626;
+            z-index: -1;
+        }
+        .glitch-text::after {
+            animation: glitch-anim-2 0.5s infinite linear alternate-reverse;
+            color: #00ff00;
+            z-index: -2;
+        }
+        @keyframes glitch-anim-1 {
+            0% { clip: rect(42px, 9999px, 44px, 0); }
+            5% { clip: rect(12px, 9999px, 59px, 0); }
+            10% { clip: rect(48px, 9999px, 29px, 0); }
+            15% { clip: rect(42px, 9999px, 73px, 0); }
+            20% { clip: rect(63px, 9999px, 27px, 0); }
+            25% { clip: rect(34px, 9999px, 55px, 0); }
+            30% { clip: rect(86px, 9999px, 73px, 0); }
+            35% { clip: rect(20px, 9999px, 20px, 0); }
+            40% { clip: rect(26px, 9999px, 60px, 0); }
+            45% { clip: rect(25px, 9999px, 66px, 0); }
+            50% { clip: rect(57px, 9999px, 98px, 0); }
+            55% { clip: rect(5px, 9999px, 46px, 0); }
+            60% { clip: rect(82px, 9999px, 31px, 0); }
+            65% { clip: rect(54px, 9999px, 27px, 0); }
+            70% { clip: rect(28px, 9999px, 99px, 0); }
+            75% { clip: rect(45px, 9999px, 69px, 0); }
+            80% { clip: rect(23px, 9999px, 85px, 0); }
+            85% { clip: rect(54px, 9999px, 84px, 0); }
+            90% { clip: rect(45px, 9999px, 47px, 0); }
+            95% { clip: rect(37px, 9999px, 20px, 0); }
+            100% { clip: rect(4px, 9999px, 91px, 0); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            5% { clip: rect(52px, 9999px, 74px, 0); }
+            10% { clip: rect(79px, 9999px, 85px, 0); }
+            15% { clip: rect(75px, 9999px, 5px, 0); }
+            20% { clip: rect(67px, 9999px, 61px, 0); }
+            25% { clip: rect(14px, 9999px, 79px, 0); }
+            30% { clip: rect(1px, 9999px, 66px, 0); }
+            35% { clip: rect(86px, 9999px, 30px, 0); }
+            40% { clip: rect(23px, 9999px, 98px, 0); }
+            45% { clip: rect(85px, 9999px, 72px, 0); }
+            50% { clip: rect(71px, 9999px, 75px, 0); }
+            55% { clip: rect(2px, 9999px, 48px, 0); }
+            60% { clip: rect(30px, 9999px, 16px, 0); }
+            65% { clip: rect(59px, 9999px, 50px, 0); }
+            70% { clip: rect(41px, 9999px, 62px, 0); }
+            75% { clip: rect(2px, 9999px, 82px, 0); }
+            80% { clip: rect(47px, 9999px, 73px, 0); }
+            85% { clip: rect(3px, 9999px, 27px, 0); }
+            90% { clip: rect(26px, 9999px, 55px, 0); }
+            95% { clip: rect(42px, 9999px, 97px, 0); }
+            100% { clip: rect(38px, 9999px, 49px, 0); }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 shadow-lg border-b border-accent/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-3xl font-cyber font-black text-accent glitch-text" data-text="SC">SC</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-300 hover:text-accent transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-accent transition-colors font-medium">Chi Sono</a>
+                    <a href="#skills" class="text-gray-300 hover:text-accent transition-colors font-medium">Competenze</a>
+                    <a href="#experience" class="text-gray-300 hover:text-accent transition-colors font-medium">Esperienza</a>
+                    <a href="#projects" class="text-gray-300 hover:text-accent transition-colors font-medium">Progetti</a>
+                    <a href="#contact" class="text-gray-300 hover:text-accent transition-colors font-medium">Contatti</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-accent/20">
+            <div class="px-4 py-2 space-y-2">
+                <a href="#home" class="block py-2 text-gray-300 hover:text-accent">Home</a>
+                <a href="#about" class="block py-2 text-gray-300 hover:text-accent">Chi Sono</a>
+                <a href="#skills" class="block py-2 text-gray-300 hover:text-accent">Competenze</a>
+                <a href="#experience" class="block py-2 text-gray-300 hover:text-accent">Esperienza</a>
+                <a href="#projects" class="block py-2 text-gray-300 hover:text-accent">Progetti</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-accent">Contatti</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen cyber-bg matrix-bg flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-white fade-in">
+                    <h1 class="text-5xl lg:text-7xl font-cyber font-black mb-6 hero-text">
+                        Stefano <span class="text-accent glitch-text" data-text="Carrara">Carrara</span>
+                    </h1>
+                    <p class="text-xl lg:text-2xl mb-4 text-red-400 font-cyber hero-text">
+                        IT Professional & Cybersecurity Expert
+                    </p>
+                    <p class="text-lg mb-8 text-gray-200 leading-relaxed hero-text">
+                        Sviluppatore Full Stack, Esperto di Sicurezza Informatica e Formatore con oltre 15 anni di esperienza nel settore IT
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                            Contattami
+                        </a>
+                        <a href="#about" class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
+                            <i data-lucide="user" class="w-5 h-5 mr-2"></i>
+                            Scopri di più
+                        </a>
+                    </div>
+                </div>
+                <div class="fade-in">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-accent/20 rounded-full blur-3xl"></div>
+                        <img src="assets/images/hero-portrait.png" alt="Stefano Carrara" class="relative rounded-2xl shadow-2xl w-full max-w-md mx-auto border-2 border-accent/50">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Chi Sono</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Professionista IT con una passione per l'innovazione tecnologica e la cybersecurity
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Il Mio Percorso</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Sono Stefano Carrara, un professionista IT con oltre 15 anni di esperienza nel settore tecnologico. 
+                        La mia carriera spazia dallo sviluppo web alla cybersecurity, dalla formazione professionale 
+                        all'amministrazione di sistemi complessi.
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Nel 2018 ho fondato Tech's Srls, una società innovativa dedicata alla ricerca e sviluppo 
+                        di soluzioni tecnologiche avanzate. Il nostro progetto è stato presentato alla BIAT 
+                        (Borsa dell'Innovazione e dell'Alta Tecnologia) riscuotendo notevole interesse.
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        Attualmente mi dedico alla formazione professionale, trasmettendo le mie competenze 
+                        in programmazione, cybersecurity e sviluppo web a centinaia di studenti.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+                            <div class="text-3xl font-bold text-accent mb-2">15+</div>
+                            <div class="text-gray-600">Anni di Esperienza</div>
+                        </div>
+                        <div class="text-center p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
+                            <div class="text-3xl font-bold text-accent mb-2">500+</div>
+                            <div class="text-gray-600">Studenti Formati</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 gap-6 fade-in">
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-primary">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="code" class="w-6 h-6 text-primary"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900">Sviluppo Software</h4>
+                        </div>
+                        <p class="text-gray-600">Esperto in Python, Java, JavaScript, HTML/CSS e framework moderni per lo sviluppo di applicazioni web e mobile.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-accent">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="shield" class="w-6 h-6 text-accent"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900">Cybersecurity</h4>
+                        </div>
+                        <p class="text-gray-600">Certificato in Ethical Hacking e Web Forensics, specializzato nella protezione di sistemi e dati aziendali.</p>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-secondary">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
+                                <i data-lucide="graduation-cap" class="w-6 h-6 text-secondary"></i>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-900">Formazione</h4>
+                        </div>
+                        <p class="text-gray-600">Docente esperto in corsi di programmazione, cybersecurity e sviluppo web per enti di formazione accreditati.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Competenze Tecniche</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Un'ampia gamma di competenze tecnologiche acquisite in oltre 15 anni di esperienza
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Programming Languages -->
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl fade-in border border-primary/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="code-2" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Linguaggi</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Python</span>
+                                <span class="text-primary">Avanzato</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">Java</span>
+                                <span class="text-primary">Avanzato</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">JavaScript</span>
+                                <span class="text-primary">Intermedio</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">HTML/CSS</span>
+                                <span class="text-primary">Avanzato</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold">PHP</span>
+                                <span class="text-primary">Intermedio</span>
+                            </div>
+                            <div class="w-full bg-gray-200 rounded-full h-2">
+                                <div class="skill-bar bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frameworks & Tools -->
+                <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-xl fade-in border border-secondary/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="layers" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Framework & Tools</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                            <span class="font-semibold">Spring Boot</span>
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                            <span class="font-semibold">Django</span>
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                            <span class="font-semibold">Angular</span>
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                            <span class="font-semibold">Vaadin</span>
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                            <span class="font-semibold">Flask</span>
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                            <span class="font-semibold">Bootstrap</span>
+                            <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cybersecurity & Systems -->
+                <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl fade-in border border-accent/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Cybersecurity</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-accent/20">
+                            <span class="font-semibold">Ethical Hacking</span>
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-accent/20">
+                            <span class="font-semibold">Web Forensics</span>
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-accent/20">
+                            <span class="font-semibold">Penetration Testing</span>
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-accent/20">
+                            <span class="font-semibold">Network Security</span>
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-accent/20">
+                            <span class="font-semibold">Malware Analysis</span>
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                        </div>
+                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-accent/20">
+                            <span class="font-semibold">Disaster Recovery</span>
+                            <i data-lucide="check" class="w-5 h-5 text-accent"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Esperienza Professionale</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Un percorso professionale ricco di sfide e successi nel mondo IT
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-accent/30"></div>
+                
+                <div class="space-y-12">
+                    <!-- Current Position -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-accent">
+                                <div class="text-sm text-accent font-semibold mb-2">2020 - Presente</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Lavoratore Autonomo</h3>
+                                <p class="text-gray-600 mb-4">Sviluppo di soluzioni informatiche, e-commerce, cloud storage e formazione continua per aziende clienti.</p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">WordPress</span>
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">E-commerce</span>
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Cloud Solutions</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Tech's Srls -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-primary">
+                                <div class="text-sm text-primary font-semibold mb-2">2018 - Presente</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Amministratore - Tech's Srls</h3>
+                                <p class="text-gray-600 mb-4">Fondatore e amministratore di società innovativa per ricerca e sviluppo. Progetto presentato alla BIAT con successo.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Innovation</span>
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">R&D</span>
+                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">BIAT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ascot Industrial -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-secondary">
+                                <div class="text-sm text-secondary font-semibold mb-2">2008 - 2019</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">IT Officer & Help Desk - Ascot Industrial</h3>
+                                <p class="text-gray-600 mb-4">IT department, helpdesk, IT support.</p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">IT Department</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Help Desk</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">IT Support</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Teaching Experience 2023-2024 -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-accent">
+                                <div class="text-sm text-accent font-semibold mb-2">2023 - 2024</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Docente Formazione Avanzata</h3>
+                                <p class="text-gray-600 mb-4">Docenza in corsi specialistici: Programmatore Python (112h), Android con Java (240h), Cybersecurity (168h), Sistemista Informatico (240h).</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Python</span>
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Android</span>
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Cybersecurity</span>
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Sistemista</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Teaching Experience 2022-2023 -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-purple-500">
+                                <div class="text-sm text-purple-600 font-semibold mb-2">2022 - 2023</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Docente Tecnico Web & Python</h3>
+                                <p class="text-gray-600 mb-4">Tecnico Produzione Pagine Web (570h in presenza), Sviluppatore Python (72h), Cloud Administrator & Security Specialist.</p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Web Development</span>
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Python</span>
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- Formazione Continua 2024-2025 -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-green-500">
+                                <div class="text-sm text-green-600 font-semibold mb-2">2024 - 2025</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Formazione Continua Specialistica</h3>
+                                <p class="text-gray-600 mb-4">Cybersecurity (multipli corsi), Java/Spring Boot, Web Data Scientist, IT Technical Support, Reti e Server, Marketing Digitale.</p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Cybersecurity</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Data Science</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Spring Boot</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Early Career -->
+                    <div class="timeline-item relative flex items-center">
+                        <div class="flex-1 pr-8 text-right">
+                            <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-gray-500">
+                                <div class="text-sm text-gray-600 font-semibold mb-2">2015 - 2019</div>
+                                <h3 class="text-xl font-bold text-gray-900 mb-2">Formatore Informatico - It Srls</h3>
+                                <p class="text-gray-600 mb-4">Docenza su hardware, sistemi operativi, reti. Formatore Help Desk Ascot Industrial per training aziendale.</p>
+                                <div class="flex flex-wrap gap-2 justify-end">
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Hardware</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Sistemi</span>
+                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Training</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-500 rounded-full border-4 border-white shadow"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Progetti e Innovazioni</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Soluzioni innovative e progetti di successo sviluppati nel corso della mia carriera
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl card-hover fade-in border border-primary/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="lightbulb" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Progetto BIAT</h3>
+                    </div>
+                    <img src="assets/images/ethical-hacking.jpg" alt="Innovation Project" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Progettazione e registrazione del copyright di un linguaggio sorgente innovativo presentato 
+                        alla Borsa dell'Innovazione e dell'Alta Tecnologia, riscuotendo interesse da parte di investitori 
+                        e aziende del settore.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Innovation</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Copyright</span>
+                        <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">R&D</span>
+                    </div>
+                    <div class="text-primary font-semibold">Stato: In sviluppo e ampliamento</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl card-hover fade-in border border-accent/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="shield-alert" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Cybersecurity Solutions</h3>
+                    </div>
+                    <img src="assets/images/cybersec-command.jpg" alt="Cybersecurity Command Center" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Implementazione di sistemi di sicurezza avanzati, penetration testing e formazione 
+                        specialistica in ethical hacking per aziende e professionisti del settore.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Ethical Hacking</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Penetration Testing</span>
+                        <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Security Training</span>
+                    </div>
+                    <div class="text-accent font-semibold">Risultato: 500+ professionisti formati</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-xl card-hover fade-in border border-secondary/20">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="cloud" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Cloud Storage Solutions</h3>
+                    </div>
+                    <img src="assets/images/data-center.jpg" alt="Data Center" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Progettazione e implementazione di soluzioni cloud personalizzate per aziende, 
+                        con focus sulla sicurezza dei dati e l'accessibilità remota.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Cloud Architecture</span>
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Data Security</span>
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Remote Access</span>
+                    </div>
+                    <div class="text-secondary font-semibold">Impatto: Efficienza aziendale +40%</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl card-hover fade-in border border-purple-200">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
+                            <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">E-commerce Development</h3>
+                    </div>
+                    <img src="assets/images/coding-workspace.jpg" alt="E-commerce Development" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Sviluppo di piattaforme e-commerce complete utilizzando WordPress, Joomla e PrestaShop, 
+                        con integrazione di sistemi di pagamento sicuri e gestione avanzata dell'inventario.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">WordPress</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">PrestaShop</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Payment Systems</span>
+                    </div>
+                    <div class="text-purple-600 font-semibold">Risultato: 20+ progetti completati</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 cyber-bg matrix-bg relative">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-white mb-4">Contattami</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Interessato a collaborare? Parliamo del tuo prossimo progetto
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="fade-in">
+                    <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-accent/30">
+                        <h3 class="text-2xl font-bold text-white mb-6">Informazioni di Contatto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-300 text-sm">Email</div>
+                                    <div class="text-white font-semibold">stefanocarrara81@gmail.com</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-300 text-sm">Telefono</div>
+                                    <div class="text-white font-semibold">(+39) 351 880 2223</div>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-center">
+                                <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-gray-300 text-sm">Indirizzo</div>
+                                    <div class="text-white font-semibold">Via Flavia n 24, 93012 Gela (CL)</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/20">
+                            <h4 class="text-lg font-semibold text-white mb-4">Disponibile per</h4>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="text-gray-300">• Consulenze IT</div>
+                                <div class="text-gray-300">• Sviluppo Software</div>
+                                <div class="text-gray-300">• Formazione</div>
+                                <div class="text-gray-300">• Cybersecurity</div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-8 border-t border-white/20">
+                            <h4 class="text-lg font-semibold text-white mb-4">Contattami direttamente</h4>
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <a href="mailto:stefanocarrara81@gmail.com" class="bg-accent hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
+                                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                                    Invia Email
+                                </a>
+                                <a href="tel:+393518802223" class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
+                                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                                    Chiama Ora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <div class="text-3xl font-cyber font-black mb-4 text-accent glitch-text" data-text="Stefano Carrara">Stefano Carrara</div>
+                <p class="text-gray-400 mb-6">IT Professional & Cybersecurity Expert</p>
+                <div class="flex justify-center space-x-6 mb-8">
+                    <a href="mailto:stefanocarrara81@gmail.com" class="text-gray-400 hover:text-accent transition-colors">
+                        <i data-lucide="mail" class="w-6 h-6"></i>
+                    </a>
+                    <a href="tel:+393518802223" class="text-gray-400 hover:text-accent transition-colors">
+                        <i data-lucide="phone" class="w-6 h-6"></i>
+                    </a>
+                </div>
+                <div class="border-t border-gray-800 pt-8">
+                    <p class="text-gray-400">© 2025 Stefano Carrara. Tutti i diritti riservati.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationDelay = '0.2s';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Skill bars animation
+        const skillBars = document.querySelectorAll('.skill-bar');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const bar = entry.target;
+                    const width = bar.style.width;
+                    bar.style.width = '0%';
+                    setTimeout(() => {
+                        bar.style.width = width;
+                    }, 500);
+                }
+            });
+        }, observerOptions);
+
+        skillBars.forEach(bar => {
+            skillObserver.observe(bar);
+        });
+
+        // Timeline animation
+        const timelineItems = document.querySelectorAll('.timeline-item');
+        timelineItems.forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Parallax effect for matrix background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const rate = scrolled * -0.5;
+            const matrixBg = document.querySelector('.matrix-bg');
+            if (matrixBg) {
+                matrixBg.style.transform = `translateY(${rate}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
+
