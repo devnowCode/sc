@@ -893,6 +893,118 @@
 
         </div>
     </div>
+
+    <!-- Contenitore principale della griglia -->
+    <div class="container mx-auto">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Certificati e Attestati</h1>
+
+        <!-- Griglia di certificati. Si adatta automaticamente in base alle dimensioni dello schermo -->
+        <div class="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+
+            <!-- Le carte dei certificati fornite dall'utente -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="1.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 1" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="2.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 2" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="3.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 3" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="4.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 4" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="5.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 5" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="6.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 6" class="certificate-image w-full h-auto object-cover">
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="7.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 7" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="8.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 8" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="9.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 9" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="10.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 10" class="certificate-image w-full h-auto object-cover">
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="11.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 11" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="12.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modale per l'ingrandimento dell'immagine -->
+    <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50 hidden">
+        <div class="relative w-full h-full max-w-5xl max-h-5xl">
+            <!-- Pulsante di chiusura -->
+            <button class="absolute top-4 right-4 text-white text-3xl font-bold cursor-pointer hover:text-gray-300" onclick="closeModal()">
+                &times;
+            </button>
+            <!-- Immagine ingrandita -->
+            <img id="modal-image" src="" alt="Certificato ingrandito" class="max-w-full max-h-full rounded-lg shadow-xl mx-auto">
+        </div>
+    </div>
+
+    <script>
+        // Funzione per mostrare il modale con l'immagine ingrandita
+        function openModal(imageSrc) {
+            const modal = document.getElementById('image-modal');
+            const modalImage = document.getElementById('modal-image');
+            modalImage.src = imageSrc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Impedisce lo scrolling della pagina quando il modale è aperto
+            document.body.style.overflow = 'hidden';
+        }
+
+        // Funzione per chiudere il modale
+        function closeModal() {
+            const modal = document.getElementById('image-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+            // Riabilita lo scrolling della pagina
+            document.body.style.overflow = 'auto';
+        }
+
+        // Aggiunge un gestore di eventi click a tutte le immagini dei certificati
+        document.addEventListener('DOMContentLoaded', () => {
+            const certificateImages = document.querySelectorAll('.certificate-image');
+            certificateImages.forEach(image => {
+                image.addEventListener('click', (e) => {
+                    openModal(e.target.src);
+                });
+            });
+
+            // Chiudi il modale se si clicca sull'overlay scuro
+            const modal = document.getElementById('image-modal');
+            modal.addEventListener('click', (e) => {
+                // Controlla se il click è stato sull'overlay e non sull'immagine stessa
+                if (e.target.id === 'image-modal') {
+                    closeModal();
+                }
+            });
+        });
+    </script>
     <!-- Contact Section -->
     <section id="contact" class="py-20 cyber-bg matrix-bg relative">
         <div class="absolute inset-0 bg-black/70"></div>
