@@ -16,7 +16,6 @@
             --color-card-dark: #1e293b; /* Blu scuro più chiaro per i contenitori */
             --color-text-light: #f3f4f6; /* Bianco quasi puro per il testo */
             --color-text-secondary: #9ca3af; /* Grigio chiaro per il testo secondario */
-            --color-accent: #00c8ff; /* Ciano per l'accento */
         }
 
         body {
@@ -24,145 +23,30 @@
             background-color: var(--color-background-dark);
             color: var(--color-text-light);
             transition: background-color 0.3s ease;
-            padding-top: 6rem; /* Spazio per la barra di navigazione fissa */
         }
-
+        
         /* Stili aggiuntivi per il tema scuro con Tailwind */
         .dark .bg-card-dark {
             background-color: var(--color-card-dark);
-        }
-
-        /* Stile personalizzato per l'accento */
-        .text-accent { color: var(--color-accent); }
-        .hover\:text-accent:hover { color: var(--color-accent); }
-        .border-accent\/20 { border-color: rgba(0, 200, 255, 0.2); }
-
-        /* Stile per l'effetto glitch (cyberpunk) */
-        .glitch-text {
-            position: relative;
-            animation: glitch-anim 2s infinite linear alternate-reverse;
-        }
-
-        .glitch-text:before,
-        .glitch-text:after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-
-        .glitch-text:before {
-            left: 2px;
-            text-shadow: -2px 0 var(--color-primary);
-            background: var(--color-background-dark);
-            overflow: hidden;
-            animation: glitch-anim-2 2s infinite linear alternate-reverse;
-        }
-
-        .glitch-text:after {
-            left: -2px;
-            text-shadow: -2px 0 var(--color-accent);
-            background: var(--color-background-dark);
-            overflow: hidden;
-            animation: glitch-anim-3 2s infinite linear alternate-reverse;
-        }
-
-        @keyframes glitch-anim {
-            0% { clip: rect(24px, 9999px, 86px, 0); }
-            5% { clip: rect(62px, 9999px, 31px, 0); }
-            10% { clip: rect(79px, 9999px, 98px, 0); }
-            15% { clip: rect(83px, 9999px, 35px, 0); }
-            20% { clip: rect(72px, 9999px, 60px, 0); }
-            25% { clip: rect(51px, 9999px, 30px, 0); }
-            30% { clip: rect(31px, 9999px, 69px, 0); }
-            35% { clip: rect(33px, 9999px, 60px, 0); }
-            40% { clip: rect(51px, 9999px, 31px, 0); }
-            45% { clip: rect(66px, 9999px, 73px, 0); }
-            50% { clip: rect(41px, 9999px, 59px, 0); }
-            55% { clip: rect(100px, 9999px, 86px, 0); }
-            60% { clip: rect(81px, 9999px, 72px, 0); }
-            65% { clip: rect(11px, 9999px, 34px, 0); }
-            70% { clip: rect(85px, 9999px, 63px, 0); }
-            75% { clip: rect(11px, 9999px, 16px, 0); }
-            80% { clip: rect(88px, 9999px, 59px, 0); }
-            85% { clip: rect(10px, 9999px, 69px, 0); }
-            90% { clip: rect(56px, 9999px, 57px, 0); }
-            95% { clip: rect(81px, 9999px, 99px, 0); }
-            100% { clip: rect(71px, 9999px, 12px, 0); }
-        }
-
-        @keyframes glitch-anim-2 {
-            0% { clip: rect(98px, 9999px, 20px, 0); }
-            5% { clip: rect(86px, 9999px, 69px, 0); }
-            10% { clip: rect(31px, 9999px, 2px, 0); }
-            15% { clip: rect(83px, 9999px, 35px, 0); }
-            20% { clip: rect(72px, 9999px, 60px, 0); }
-            25% { clip: rect(51px, 9999px, 30px, 0); }
-            30% { clip: rect(31px, 9999px, 69px, 0); }
-            35% { clip: rect(33px, 9999px, 60px, 0); }
-            40% { clip: rect(51px, 9999px, 31px, 0); }
-            45% { clip: rect(66px, 9999px, 73px, 0); }
-            50% { clip: rect(41px, 9999px, 59px, 0); }
-            55% { clip: rect(100px, 9999px, 86px, 0); }
-            60% { clip: rect(81px, 9999px, 72px, 0); }
-            65% { clip: rect(11px, 9999px, 34px, 0); }
-            70% { clip: rect(85px, 9999px, 63px, 0); }
-            75% { clip: rect(11px, 9999px, 16px, 0); }
-            80% { clip: rect(88px, 9999px, 59px, 0); }
-            85% { clip: rect(10px, 9999px, 69px, 0); }
-            90% { clip: rect(56px, 9999px, 57px, 0); }
-            95% { clip: rect(81px, 9999px, 99px, 0); }
-            100% { clip: rect(71px, 9999px, 12px, 0); }
-        }
-
-        @keyframes glitch-anim-3 {
-            0% { clip: rect(74px, 9999px, 86px, 0); }
-            5% { clip: rect(73px, 9999px, 94px, 0); }
-            10% { clip: rect(13px, 9999px, 83px, 0); }
-            15% { clip: rect(11px, 9999px, 4px, 0); }
-            20% { clip: rect(53px, 9999px, 17px, 0); }
-            25% { clip: rect(27px, 9999px, 69px, 0); }
-            30% { clip: rect(71px, 9999px, 82px, 0); }
-            35% { clip: rect(51px, 9999px, 60px, 0); }
-            40% { clip: rect(54px, 9999px, 84px, 0); }
-            45% { clip: rect(79px, 9999px, 85px, 0); }
-            50% { clip: rect(12px, 9999px, 10px, 0); }
-            55% { clip: rect(73px, 9999px, 40px, 0); }
-            60% { clip: rect(14px, 9999px, 57px, 0); }
-            65% { clip: rect(31px, 9999px, 17px, 0); }
-            70% { clip: rect(98px, 9999px, 51px, 0); }
-            75% { clip: rect(90px, 9999px, 16px, 0); }
-            80% { clip: rect(55px, 9999px, 100px, 0); }
-            85% { clip: rect(38px, 9999px, 64px, 0); }
-            90% { clip: rect(90px, 9999px, 99px, 0); }
-            95% { clip: rect(35px, 9999px, 15px, 0); }
-            100% { clip: rect(44px, 9999px, 89px, 0); }
-        }
-
-        /* Stile per nascondere il testo nel logo, mantenendo solo il glitch */
-        .glitch-text span {
-            display: none;
         }
     </style>
 </head>
 <body class="p-4 md:p-8 bg-slate-900 text-slate-100">
 
     <!-- Navigation -->
-    <nav class="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 shadow-lg border-b border-accent/20">
+    <nav class="w-full bg-slate-900/95 border-b border-red-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <a href="#home" class="text-3xl font-cyber font-black text-accent glitch-text" data-text="SC">
-                    <span style="color: white;">SC</span>
+                <a href="#home" class="text-3xl font-extrabold flex items-center">
+                    <span class="text-white">S</span><span class="text-red-500">C</span>
                 </a>
                 <div class="hidden md:flex space-x-8">
-                    <a href="#home" class="text-gray-300 hover:text-accent transition-colors font-medium">Home</a>
-                    <a href="#about" class="text-gray-300 hover:text-accent transition-colors font-medium">Chi Sono</a>
-                    <a href="#skills" class="text-gray-300 hover:text-accent transition-colors font-medium">Competenze</a>
-                    <a href="#experience" class="text-gray-300 hover:text-accent transition-colors font-medium">Esperienza</a>
-                    <a href="#projects" class="text-gray-300 hover:text-accent transition-colors font-medium">Progetti</a>
-                    <a href="#contact" class="text-gray-300 hover:text-accent transition-colors font-medium">Contatti</a>
+                    <a href="#home" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Chi Sono</a>
+                    <a href="#skills" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Competenze</a>
+                    <a href="#experience" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Esperienza</a>
+                    <a href="#projects" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Progetti</a>
+                    <a href="#contact" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Contatti</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300">
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -170,20 +54,20 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-accent/20">
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-red-500/20">
             <div class="px-4 py-2 space-y-2">
-                <a href="#home" class="block py-2 text-gray-300 hover:text-accent">Home</a>
-                <a href="#about" class="block py-2 text-gray-300 hover:text-accent">Chi Sono</a>
-                <a href="#skills" class="block py-2 text-gray-300 hover:text-accent">Competenze</a>
-                <a href="#experience" class="block py-2 text-gray-300 hover:text-accent">Esperienza</a>
-                <a href="#projects" class="block py-2 text-gray-300 hover:text-accent">Progetti</a>
-                <a href="#contact" class="block py-2 text-gray-300 hover:text-accent">Contatti</a>
+                <a href="#home" class="block py-2 text-gray-300 hover:text-red-500">Home</a>
+                <a href="#about" class="block py-2 text-gray-300 hover:text-red-500">Chi Sono</a>
+                <a href="#skills" class="block py-2 text-gray-300 hover:text-red-500">Competenze</a>
+                <a href="#experience" class="block py-2 text-gray-300 hover:text-red-500">Esperienza</a>
+                <a href="#projects" class="block py-2 text-gray-300 hover:text-red-500">Progetti</a>
+                <a href="#contact" class="block py-2 text-gray-300 hover:text-red-500">Contatti</a>
             </div>
         </div>
     </nav>
 
-    <!-- Contenuto principale della pagina -->
-    <div id="home" class="container mx-auto max-w-4xl bg-slate-800 p-8 rounded-xl shadow-2xl border border-slate-700">
+    <!-- Contenitore principale della pagina -->
+    <div id="home" class="container mx-auto max-w-4xl bg-slate-800 p-8 rounded-xl shadow-2xl border border-slate-700 mt-8">
 
         <!-- Header della pagina -->
         <header class="text-center mb-10">
@@ -249,31 +133,26 @@
             </div>
         </section>
 
-        <!-- Sezione "Esperienza" (nuova)
+        <!-- Sezione "Esperienza" (nuova) 
         <section id="experience" class="mb-10 p-6 rounded-lg bg-slate-700">
             <h2 class="text-3xl font-bold text-red-400 mb-4 border-b border-red-500 pb-2">Esperienza</h2>
             <p class="text-slate-200 leading-relaxed">
-                Qui puoi inserire la tua esperienza lavorativa, i ruoli ricoperti e le aziende con cui hai collaborato.
-            </p>
-        </section> -->
+             </p>
+        </section>-->
 
         <!-- Sezione "Progetti" (nuova)
         <section id="projects" class="mb-10 p-6 rounded-lg bg-slate-700">
             <h2 class="text-3xl font-bold text-red-400 mb-4 border-b border-red-500 pb-2">Progetti</h2>
             <p class="text-slate-200 leading-relaxed">
-                Qui puoi mostrare i progetti di cui sei più orgoglioso, con descrizioni dettagliate e link utili.
-            </p>
+             </p>
         </section> -->
 
-        <!-- Sezione "Contatti" (nuova)
-        <section id="contact" class="mb-10 p-6 rounded-lg bg-slate-700">
-            <h2 class="text-3xl font-bold text-red-400 mb-4 border-b border-red-500 pb-2">Contatti</h2>
-            <p class="text-slate-200 leading-relaxed">
-                Qui puoi inserire le informazioni per essere contattato, come email, telefono e moduli di contatto.
-            </p>
-        </section> -->
 
     </div>
+    
+
+
+
     
     
     <!-- Footer -->
@@ -292,13 +171,13 @@
                 </div>
                 <div class="border-t border-gray-800 pt-8">
                     <p class="text-gray-400">© 2025 Stefano Carrara. Tutti i diritti riservati. Partita Iva:02975610847
-CARRARA STEFANO</p>
+</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Script per la gestione del menu mobile e l'inizializzazione delle icone -->
+        <!-- Script per la gestione del menu mobile e l'inizializzazione delle icone -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
