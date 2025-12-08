@@ -103,6 +103,86 @@
             border-radius: inherit;
         }
         
+        /* Services Table Styles */
+        .service-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        .service-table thead {
+            background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+        }
+        .service-table th {
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            color: white;
+            border-bottom: 2px solid #dc2626;
+        }
+        .service-table tbody tr {
+            background: white;
+            transition: all 0.3s ease;
+        }
+        .service-table tbody tr:hover {
+            background: #fef2f2;
+            transform: translateX(5px);
+            box-shadow: -5px 0 0 0 #dc2626;
+        }
+        .service-table td {
+            padding: 20px 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .service-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        .service-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #fee2e2;
+            color: #dc2626;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin: 2px;
+        }
+        .service-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #dc2626;
+        }
+        .service-duration {
+            color: #6b7280;
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .service-table {
+                display: none;
+            }
+            .service-card {
+                display: block;
+                background: white;
+                border-radius: 12px;
+                padding: 20px;
+                margin-bottom: 16px;
+                box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+                border-left: 4px solid #dc2626;
+                transition: all 0.3s ease;
+            }
+            .service-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.2);
+            }
+        }
+        @media (min-width: 769px) {
+            .service-card {
+                display: none;
+            }
+        }
+        
     </style>
 </head>
 <body class="font-sans text-gray-800">
@@ -120,6 +200,7 @@
                     <a href="#skills" class="text-gray-300 hover:text-accent transition-colors font-medium">Competenze</a>
                     <a href="#experience" class="text-gray-300 hover:text-accent transition-colors font-medium">Esperienza</a>
                     <a href="#projects" class="text-gray-300 hover:text-accent transition-colors font-medium">Progetti</a>
+                    <a href="#services" class="text-gray-300 hover:text-accent transition-colors font-medium">Servizi</a>
                     <a href="cyber.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Cyber Academy</a>
                     <a href="#contact" class="text-gray-300 hover:text-accent transition-colors font-medium">Contatti</a>
                 </div>
@@ -136,6 +217,7 @@
                 <a href="#skills" class="block py-2 text-gray-300 hover:text-accent">Competenze</a>
                 <a href="#experience" class="block py-2 text-gray-300 hover:text-accent">Esperienza</a>
                 <a href="#projects" class="block py-2 text-gray-300 hover:text-accent">Progetti</a>
+                <a href="#services" class="block py-2 text-gray-300 hover:text-accent">Servizi</a>
                 <a href="cyber.html" class="block py-2 text-gray-300 hover:text-accent">Cyber Academy</a>
                 <a href="#contact" class="block py-2 text-gray-300 hover:text-accent">Contatti</a>
             </div>
@@ -682,6 +764,321 @@
                         <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Payment Systems</span>
                     </div>
                     <div class="text-purple-600 font-semibold">Risultato: 60+ progetti completati</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Servizi e Tariffe</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Soluzioni professionali per formazione, sviluppo e cybersecurity con pacchetti chiari e trasparenti
+                </p>
+            </div>
+
+            <!-- Formazione e Sviluppo -->
+            <div class="mb-16 fade-in">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900">Formazione e Sviluppo</h3>
+                </div>
+                
+                <!-- Desktop Table -->
+                <div class="overflow-x-auto shadow-lg rounded-xl">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th>Servizio</th>
+                                <th>Pacchetto Fisso</th>
+                                <th>Durata</th>
+                                <th>Deliverable Inclusi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Docenza Python Security</td>
+                                <td><span class="service-price">400€</span></td>
+                                <td><span class="service-duration">10 ore</span></td>
+                                <td>
+                                    <span class="service-badge">10 sessioni Zoom live</span>
+                                    <span class="service-badge">Script pronti + labs</span>
+                                    <span class="service-badge">Materiali PDF/video</span>
+                                    <span class="service-badge">Certificato ore</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Docenza Full Stack Secure</td>
+                                <td><span class="service-price">500€</span></td>
+                                <td><span class="service-duration">10 ore</span></td>
+                                <td>
+                                    <span class="service-badge">Django + Docker security</span>
+                                    <span class="service-badge">Deploy sicuro cloud</span>
+                                    <span class="service-badge">Labs pratici</span>
+                                    <span class="service-badge">Slide + registrazioni</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Script Python Custom</td>
+                                <td><span class="service-price">600€</span></td>
+                                <td><span class="service-duration">12 ore</span></td>
+                                <td>
+                                    <span class="service-badge">Tool personalizzato</span>
+                                    <span class="service-badge">Documentazione completa</span>
+                                    <span class="service-badge">Test + demo video</span>
+                                    <span class="service-badge">Manutenzione 30gg</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Sviluppo Full Stack App</td>
+                                <td><span class="service-price">1.500€</span></td>
+                                <td><span class="service-duration">25 ore</span></td>
+                                <td>
+                                    <span class="service-badge">App Django completa</span>
+                                    <span class="service-badge">Frontend moderno</span>
+                                    <span class="service-badge">Deploy Docker</span>
+                                    <span class="service-badge">Test sicurezza inclusi</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">IT Career Mentoring</td>
+                                <td><span class="service-price">450€</span></td>
+                                <td><span class="service-duration">10 ore</span></td>
+                                <td>
+                                    <span class="service-badge">Revisione CV/LinkedIn</span>
+                                    <span class="service-badge">Simulazione colloqui</span>
+                                    <span class="service-badge">Piano certificazioni</span>
+                                    <span class="service-badge">Lettere presentazione</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Mobile Cards -->
+                <div class="mobile-cards">
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Docenza Python Security</h4>
+                        <div class="mb-3">
+                            <span class="service-price">400€</span>
+                            <span class="service-duration ml-3">• 10 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">10 sessioni Zoom live</span>
+                        <span class="service-badge">Script pronti + labs</span>
+                        <span class="service-badge">Materiali PDF/video</span>
+                        <span class="service-badge">Certificato ore</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Docenza Full Stack Secure</h4>
+                        <div class="mb-3">
+                            <span class="service-price">500€</span>
+                            <span class="service-duration ml-3">• 10 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Django + Docker security</span>
+                        <span class="service-badge">Deploy sicuro cloud</span>
+                        <span class="service-badge">Labs pratici</span>
+                        <span class="service-badge">Slide + registrazioni</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Script Python Custom</h4>
+                        <div class="mb-3">
+                            <span class="service-price">600€</span>
+                            <span class="service-duration ml-3">• 12 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Tool personalizzato</span>
+                        <span class="service-badge">Documentazione completa</span>
+                        <span class="service-badge">Test + demo video</span>
+                        <span class="service-badge">Manutenzione 30gg</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Sviluppo Full Stack App</h4>
+                        <div class="mb-3">
+                            <span class="service-price">1.500€</span>
+                            <span class="service-duration ml-3">• 25 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">App Django completa</span>
+                        <span class="service-badge">Frontend moderno</span>
+                        <span class="service-badge">Deploy Docker</span>
+                        <span class="service-badge">Test sicurezza inclusi</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">IT Career Mentoring</h4>
+                        <div class="mb-3">
+                            <span class="service-price">450€</span>
+                            <span class="service-duration ml-3">• 10 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Revisione CV/LinkedIn</span>
+                        <span class="service-badge">Simulazione colloqui</span>
+                        <span class="service-badge">Piano certificazioni</span>
+                        <span class="service-badge">Lettere presentazione</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cybersecurity e Pentesting -->
+            <div class="fade-in">
+                <div class="flex items-center mb-8">
+                    <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
+                        <i data-lucide="shield-alert" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900">Cybersecurity e Pentesting</h3>
+                </div>
+                
+                <!-- Desktop Table -->
+                <div class="overflow-x-auto shadow-lg rounded-xl">
+                    <table class="service-table">
+                        <thead>
+                            <tr>
+                                <th>Servizio</th>
+                                <th>Pacchetto Fisso</th>
+                                <th>Durata</th>
+                                <th>Deliverable Inclusi</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Vulnerability Scan Base</td>
+                                <td><span class="service-price">300€</span></td>
+                                <td><span class="service-duration">6 ore</span></td>
+                                <td>
+                                    <span class="service-badge">Report PDF 10p</span>
+                                    <span class="service-badge">50+ vulnerabilità (CVSS)</span>
+                                    <span class="service-badge">Executive Summary 2p</span>
+                                    <span class="service-badge">Export risultati</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Web App Pentest</td>
+                                <td><span class="service-price">800€</span></td>
+                                <td><span class="service-duration">1 giorno</span></td>
+                                <td>
+                                    <span class="service-badge">Report 15p con screenshot</span>
+                                    <span class="service-badge">OWASP Top10 test</span>
+                                    <span class="service-badge">Exploit demo + remediation</span>
+                                    <span class="service-badge">Priorità rischi</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Network Pentest</td>
+                                <td><span class="service-price">500€</span></td>
+                                <td><span class="service-duration">8 ore</span></td>
+                                <td>
+                                    <span class="service-badge">Scan completo <50 IP</span>
+                                    <span class="service-badge">Report Nmap dettagliato</span>
+                                    <span class="service-badge">Exploits testati</span>
+                                    <span class="service-badge">Remediation plan</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Full Pentest (Web+Network)</td>
+                                <td><span class="service-price">1.500€</span></td>
+                                <td><span class="service-duration">3 giorni</span></td>
+                                <td>
+                                    <span class="service-badge">Report executive 25p</span>
+                                    <span class="service-badge">Video demo attacchi</span>
+                                    <span class="service-badge">Risk matrix</span>
+                                    <span class="service-badge">30gg follow-up</span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="font-semibold text-gray-900">Remediation Consulting</td>
+                                <td><span class="service-price">200€</span></td>
+                                <td><span class="service-duration">4 ore</span></td>
+                                <td>
+                                    <span class="service-badge">Verifica fix vulnerabilità</span>
+                                    <span class="service-badge">Seconda scansione</span>
+                                    <span class="service-badge">Certificato sicurezza</span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Mobile Cards -->
+                <div class="mobile-cards">
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Vulnerability Scan Base</h4>
+                        <div class="mb-3">
+                            <span class="service-price">300€</span>
+                            <span class="service-duration ml-3">• 6 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Report PDF 10p</span>
+                        <span class="service-badge">50+ vulnerabilità (CVSS)</span>
+                        <span class="service-badge">Executive Summary 2p</span>
+                        <span class="service-badge">Export risultati</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Web App Pentest</h4>
+                        <div class="mb-3">
+                            <span class="service-price">800€</span>
+                            <span class="service-duration ml-3">• 1 giorno</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Report 15p con screenshot</span>
+                        <span class="service-badge">OWASP Top10 test</span>
+                        <span class="service-badge">Exploit demo + remediation</span>
+                        <span class="service-badge">Priorità rischi</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Network Pentest</h4>
+                        <div class="mb-3">
+                            <span class="service-price">500€</span>
+                            <span class="service-duration ml-3">• 8 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Scan completo <50 IP</span>
+                        <span class="service-badge">Report Nmap dettagliato</span>
+                        <span class="service-badge">Exploits testati</span>
+                        <span class="service-badge">Remediation plan</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Full Pentest (Web+Network)</h4>
+                        <div class="mb-3">
+                            <span class="service-price">1.500€</span>
+                            <span class="service-duration ml-3">• 3 giorni</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Report executive 25p</span>
+                        <span class="service-badge">Video demo attacchi</span>
+                        <span class="service-badge">Risk matrix</span>
+                        <span class="service-badge">30gg follow-up</span>
+                    </div>
+                    <div class="service-card">
+                        <h4 class="text-xl font-bold text-gray-900 mb-2">Remediation Consulting</h4>
+                        <div class="mb-3">
+                            <span class="service-price">200€</span>
+                            <span class="service-duration ml-3">• 4 ore</span>
+                        </div>
+                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
+                        <span class="service-badge">Verifica fix vulnerabilità</span>
+                        <span class="service-badge">Seconda scansione</span>
+                        <span class="service-badge">Certificato sicurezza</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="mt-16 text-center fade-in">
+                <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl border border-accent/20">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Interessato ai nostri servizi?</h3>
+                    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                        Contattami per discutere le tue esigenze e ricevere un preventivo personalizzato. 
+                        Tutti i pacchetti possono essere adattati alle specifiche necessità del cliente.
+                    </p>
+                    <a href="#contact" class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
+                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                        Richiedi Preventivo
+                    </a>
                 </div>
             </div>
         </div>

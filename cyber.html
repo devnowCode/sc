@@ -1,53 +1,66 @@
 <!DOCTYPE html>
 <html lang="it" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC Cyber Academy</title>
-    <!-- Carica Tailwind CSS per uno stile moderno e responsive -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Configurazione per il tema scuro */
-        :root {
-            --color-primary: #ef4444; /* Rosso vibrante */
-            --color-background-dark: #0f172a; /* Blu scuro per lo sfondo */
-            --color-card-dark: #1e293b; /* Blu scuro più chiaro per i contenitori */
-            --color-text-light: #f3f4f6; /* Bianco quasi puro per il testo */
-            --color-text-secondary: #9ca3af; /* Grigio chiaro per il testo secondario */
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'cyber': ['Orbitron', 'monospace'],
+                    },
+                    colors: {
+                        'primary': '#1e3a8a',
+                        'secondary': '#3b82f6',
+                        'accent': '#dc2626',
+                        'cyber-red': '#ff0000',
+                        'cyber-green': '#00ff00',
+                    }
+                }
+            }
         }
-
+    </script>
+    <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: var(--color-background-dark);
-            color: var(--color-text-light);
-            transition: background-color 0.3s ease;
-        }
-        
-        /* Stili aggiuntivi per il tema scuro con Tailwind */
-        .dark .bg-card-dark {
-            background-color: var(--color-card-dark);
         }
     </style>
 </head>
+
 <body class="p-4 md:p-8 bg-slate-900 text-slate-100">
 
     <!-- Navigation -->
     <nav class="w-full bg-slate-900/95 border-b border-red-500/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
-                <a href="#home" class="text-3xl font-extrabold flex items-center">
-                    <span class="text-white">S</span><span class="text-red-500">C</span>
-                </a>
+                <div class="text-3xl font-cyber font-black text-accent glitch-text" data-text="SC">
+                    <span style="color: white;">S</span>C
+                </div>
                 <div class="hidden md:flex space-x-8">
-                    <a href="index.html#home" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Home</a>
-                    <a href="index.html#about" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Chi Sono</a>
-                    <a href="index.html#skills" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Competenze</a>
-                    <a href="index.html#experience" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Esperienza</a>
-                    <a href="index.html#projects" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Progetti</a>
-                    <a href="cyber.html" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Cyber Academy</a>
-                    <a href="#contact" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Contatti</a>
+                    <a href="index.html#home"
+                        class="text-gray-300 hover:text-red-500 transition-colors font-medium">Home</a>
+                    <a href="index.html#about"
+                        class="text-gray-300 hover:text-red-500 transition-colors font-medium">Chi Sono</a>
+                    <a href="index.html#skills"
+                        class="text-gray-300 hover:text-red-500 transition-colors font-medium">Competenze</a>
+                    <a href="index.html#experience"
+                        class="text-gray-300 hover:text-red-500 transition-colors font-medium">Esperienza</a>
+                    <a href="index.html#projects"
+                        class="text-gray-300 hover:text-red-500 transition-colors font-medium">Progetti</a>
+                    <a href="cyber.html" class="text-gray-300 hover:text-red-500 transition-colors font-medium">Cyber
+                        Academy</a>
+                    <a href="#contact"
+                        class="text-gray-300 hover:text-red-500 transition-colors font-medium">Contatti</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300">
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -68,102 +81,316 @@
     </nav>
 
     <!-- Contenitore principale della pagina -->
-    <div id="home" class="container mx-auto max-w-4xl bg-slate-800 p-8 rounded-xl shadow-2xl border border-slate-700 mt-8">
+    <div id="home"
+        class="container mx-auto max-w-6xl bg-slate-800 p-8 rounded-xl shadow-2xl border border-slate-700 mt-8">
 
         <!-- Header della pagina -->
         <header class="text-center mb-10">
-            <h1 class="text-5xl font-extrabold text-red-500 mb-2 tracking-wide">SC Cyber Academy</h1>
-            <p class="text-xl text-slate-300">Formazione professionale in Cybersecurity e Competenze Digitali</p>
+            <h1 class="text-5xl font-cyber font-extrabold text-red-500 mb-2 tracking-wide">SC Cyber Academy</h1>
+            <p class="text-xl text-slate-300 mb-2">Formazione Professionale Pratica | Cybersecurity & Informatica | 2025
+            </p>
+            <p class="text-slate-400 leading-relaxed max-w-4xl mx-auto mt-4">
+                SC Cyber Academy offre corsi privati di cybersecurity, informatica e competenze digitali avanzate per
+                professionisti, aziende e studenti. Approccio <strong class="text-red-400">100% pratico</strong> con
+                docenti qualificati, materiali aggiornati e attestato di partecipazione al termine.
+            </p>
+            <p class="text-slate-400 mt-2">
+                <span class="text-red-300">Lezioni online/in presenza</span> | <span class="text-red-300">Moduli
+                    personalizzati</span> | <span class="text-red-300">Nessuna certificazione ufficiale - solo
+                    formazione reale</span>
+            </p>
+
+            <!-- Pulsanti Contatto -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <a href="tel:+393518802223"
+                    class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center shadow-lg hover:shadow-red-500/50">
+                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                    Chiama Ora
+                </a>
+                <a href="mailto:stefanocarrara81@gmail.com"
+                    class="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
+                    <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                    Invia Email
+                </a>
+            </div>
         </header>
 
-        <!-- Sezione "Chi siamo" -->
-        <section id="about" class="mb-10 p-6 rounded-lg bg-slate-700">
-            <h2 class="text-3xl font-bold text-red-400 mb-4 border-b border-red-500 pb-2">Chi Siamo</h2>
-            <p class="text-slate-200 leading-relaxed mb-4">
-                SC Cyber Academy è un servizio di formazione professionale che offre corsi privati di cybersecurity, informatica e competenze digitali avanzate. I nostri programmi sono pensati per professionisti, aziende e studenti che vogliono acquisire competenze reali spendibili nel mondo del lavoro.
-            </p>
-            <p class="text-slate-200 leading-relaxed">
-                Le lezioni si svolgono online o in presenza, con docenti qualificati e materiali aggiornati alle ultime minacce e tecnologie. I nostri corsi si distinguono per un approccio pratico, moduli personalizzati e, al termine, viene rilasciato un attestato di partecipazione.
-            </p>
+        <!-- Sezione Corsi Cybersecurity -->
+        <section id="cybersecurity-courses" class="mb-12">
+            <div class="mb-6">
+                <h2 class="text-3xl font-cyber font-bold text-red-400 mb-2 border-b border-red-500 pb-2">Corsi
+                    Cybersecurity
+                    Pratici</h2>
+                <p class="text-slate-300 text-sm">Hands-On Labs | Kali Linux | Pentest Skills</p>
+            </div>
+
+            <!-- Desktop Table -->
+            <div class="overflow-x-auto rounded-lg shadow-lg hidden md:block">
+                <table class="w-full border-collapse bg-slate-700">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-red-600 to-red-700">
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Corso
+                            </th>
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Durata
+                            </th>
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Prezzo
+                            </th>
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Contenuti
+                                Pratici</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100 border-b border-slate-600">Cyber Starter
+                            </td>
+                            <td class="px-6 py-4 text-slate-300 border-b border-slate-600">4 settimane</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg border-b border-slate-600">299€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm border-b border-slate-600">Kali base, Nmap
+                                scanning, 20 TryHackMe rooms, Linux commands</td>
+                        </tr>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100 border-b border-slate-600">PenTest Junior
+                            </td>
+                            <td class="px-6 py-4 text-slate-300 border-b border-slate-600">8 settimane</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg border-b border-slate-600">599€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm border-b border-slate-600">PBQ simulate, Burp
+                                Suite web, Metasploit exploits, 40h labs</td>
+                        </tr>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100 border-b border-slate-600">Pentest
+                                Advanced</td>
+                            <td class="px-6 py-4 text-slate-300 border-b border-slate-600">12 settimane</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg border-b border-slate-600">899€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm border-b border-slate-600">Web/network pentest,
+                                report executive, HackTheBox, 70h labs</td>
+                        </tr>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100">Cybersecurity Bootcamp</td>
+                            <td class="px-6 py-4 text-slate-300">6 mesi</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg">1.699€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm">Full stack security: Kali→Python→Portfolio
+                                (200h totali)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mobile Cards -->
+            <div class="md:hidden space-y-4">
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Cyber Starter</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">4 settimane</span>
+                        <span class="text-red-400 font-bold text-2xl">299€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">Kali base, Nmap scanning, 20 TryHackMe rooms, Linux commands</p>
+                </div>
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">PenTest Junior</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">8 settimane</span>
+                        <span class="text-red-400 font-bold text-2xl">599€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">PBQ simulate, Burp Suite web, Metasploit exploits, 40h labs</p>
+                </div>
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Pentest Advanced</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">12 settimane</span>
+                        <span class="text-red-400 font-bold text-2xl">899€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">Web/network pentest, report executive, HackTheBox, 70h labs</p>
+                </div>
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Cybersecurity Bootcamp</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">6 mesi</span>
+                        <span class="text-red-400 font-bold text-2xl">1.699€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">Full stack security: Kali→Python→Portfolio (200h totali)</p>
+                </div>
+            </div>
         </section>
 
-        <!-- Sezione "Corsi Offerti" -->
-        <section id="skills" class="mb-10">
-            <h2 class="text-3xl font-bold text-red-400 mb-6 border-b border-red-500 pb-2">Corsi Offerti</h2>
-            <p class="text-slate-300 leading-relaxed mb-6">
-                Il nostro catalogo corsi è strutturato in categorie per offrirti un percorso formativo mirato. Ecco alcuni esempi:
-            </p>
-
-            <!-- Categoria: Sicurezza Informatica -->
-            <div class="mb-8 p-6 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors duration-300">
-                <h3 class="text-2xl font-semibold text-red-300 flex items-center mb-4">
-                    <span class="mr-3 text-3xl">🌐</span> Sicurezza Informatica
-                </h3>
-                <ul class="list-disc list-inside text-slate-200 space-y-2 ml-6">
-                    <li>Introduzione alla cybersecurity</li>
-                    <li>Sicurezza di rete (Firewall, VPN, IDS/IPS)</li>
-                    <li>Ethical hacking & penetration testing</li>
-                    <li>Sicurezza dei dati e GDPR</li>
-                </ul>
+        <!-- Sezione Corsi Programmazione -->
+        <section id="programming-courses" class="mb-12">
+            <div class="mb-6">
+                <h2 class="text-3xl font-cyber font-bold text-red-400 mb-2 border-b border-red-500 pb-2">Corsi
+                    Programmazione &
+                    Competenze Digitali</h2>
+                <p class="text-slate-300 text-sm">Python Security | Full Stack | Career Skills</p>
             </div>
 
-            <!-- Categoria: Competenze Digitali -->
-            <div class="mb-8 p-6 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors duration-300">
-                <h3 class="text-2xl font-semibold text-red-300 flex items-center mb-4">
-                    <span class="mr-3 text-3xl">🖥️</span> Competenze Digitali
-                </h3>
-                <ul class="list-disc list-inside text-slate-200 space-y-2 ml-6">
-                    <li>Sistemi operativi e ambienti virtuali</li>
-                    <li>Networking e protocolli Internet</li>
-                    <li>Cloud computing (Azure, AWS, Google Cloud)</li>
-                    <li>Introduzione a Linux e Bash scripting</li>
-                </ul>
+            <!-- Desktop Table -->
+            <div class="overflow-x-auto rounded-lg shadow-lg hidden md:block">
+                <table class="w-full border-collapse bg-slate-700">
+                    <thead>
+                        <tr class="bg-gradient-to-r from-red-600 to-red-700">
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Corso
+                            </th>
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Durata
+                            </th>
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Prezzo
+                            </th>
+                            <th class="px-6 py-4 text-left text-white font-semibold border-b-2 border-red-500">Contenuti
+                                Pratici</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100 border-b border-slate-600">Python for
+                                Pentest</td>
+                            <td class="px-6 py-4 text-slate-300 border-b border-slate-600">10 ore</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg border-b border-slate-600">400€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm border-b border-slate-600">Script Kali,
+                                automazione scansioni, GitHub repo</td>
+                        </tr>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100 border-b border-slate-600">Kali Linux
+                                Mastery</td>
+                            <td class="px-6 py-4 text-slate-300 border-b border-slate-600">10 ore</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg border-b border-slate-600">450€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm border-b border-slate-600">20+ tools
+                                configurati, cheat sheets pratici</td>
+                        </tr>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100 border-b border-slate-600">Pentest
+                                Reporting</td>
+                            <td class="px-6 py-4 text-slate-300 border-b border-slate-600">10 ore</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg border-b border-slate-600">450€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm border-b border-slate-600">Template executive +
+                                5 report esempi</td>
+                        </tr>
+                        <tr class="hover:bg-slate-600 transition-colors">
+                            <td class="px-6 py-4 font-semibold text-slate-100">Custom Pentest Labs</td>
+                            <td class="px-6 py-4 text-slate-300">10 ore</td>
+                            <td class="px-6 py-4 text-red-400 font-bold text-lg">550€</td>
+                            <td class="px-6 py-4 text-slate-300 text-sm">Macchine virtuali personalizzate</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
 
-            <!-- Categoria: Specializzazioni -->
-            <div class="mb-8 p-6 rounded-lg bg-slate-700 hover:bg-slate-600 transition-colors duration-300">
-                <h3 class="text-2xl font-semibold text-red-300 flex items-center mb-4">
-                    <span class="mr-3 text-3xl">🔒</span> Specializzazioni
-                </h3>
-                <ul class="list-disc list-inside text-slate-200 space-y-2 ml-6">
-                    <li>Malware analysis e threat intelligence</li>
-                    <li>Digital forensics</li>
-                    <li>Cybersecurity per le PMI</li>
-                    <li>Sicurezza applicazioni web</li>
-                </ul>
+            <!-- Mobile Cards -->
+            <div class="md:hidden space-y-4">
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Python for Pentest</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">10 ore</span>
+                        <span class="text-red-400 font-bold text-2xl">400€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">Script Kali, automazione scansioni, GitHub repo</p>
+                </div>
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Kali Linux Mastery</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">10 ore</span>
+                        <span class="text-red-400 font-bold text-2xl">450€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">20+ tools configurati, cheat sheets pratici</p>
+                </div>
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Pentest Reporting</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">10 ore</span>
+                        <span class="text-red-400 font-bold text-2xl">450€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">Template executive + 5 report esempi</p>
+                </div>
+                <div class="bg-slate-700 p-5 rounded-lg border-l-4 border-red-500 hover:bg-slate-600 transition-colors">
+                    <h3 class="text-xl font-cyber font-bold text-slate-100 mb-2">Custom Pentest Labs</h3>
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-slate-300">10 ore</span>
+                        <span class="text-red-400 font-bold text-2xl">550€</span>
+                    </div>
+                    <p class="text-slate-300 text-sm">Macchine virtuali personalizzate</p>
+                </div>
             </div>
         </section>
 
-        <!-- Sezione "Esperienza" (nuova) 
-        <section id="experience" class="mb-10 p-6 rounded-lg bg-slate-700">
-            <h2 class="text-3xl font-bold text-red-400 mb-4 border-b border-red-500 pb-2">Esperienza</h2>
-            <p class="text-slate-200 leading-relaxed">
-             </p>
-        </section>-->
+        <!-- Sezione Cosa Ricevi -->
+        <section id="benefits"
+            class="mb-12 p-6 rounded-lg bg-gradient-to-br from-slate-700 to-slate-800 border border-red-500/30">
+            <h2 class="text-3xl font-cyber font-bold text-red-400 mb-6 text-center">Cosa ricevi:</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex items-start space-x-3">
+                    <div class="text-red-400 text-2xl">✓</div>
+                    <div>
+                        <h3 class="text-slate-100 font-semibold mb-1">Attestato di partecipazione SC Cyber Academy</h3>
+                        <p class="text-slate-400 text-sm">Certificato ufficiale di completamento corso</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="text-red-400 text-2xl">✓</div>
+                    <div>
+                        <h3 class="text-slate-100 font-semibold mb-1">Materiali lifetime (video, slide, script, labs)
+                        </h3>
+                        <p class="text-slate-400 text-sm">Accesso illimitato a tutti i materiali del corso</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="text-red-400 text-2xl">✓</div>
+                    <div>
+                        <h3 class="text-slate-100 font-semibold mb-1">Accesso community Discord per dubbi</h3>
+                        <p class="text-slate-400 text-sm">Supporto continuo dalla community e dai docenti</p>
+                    </div>
+                </div>
+                <div class="flex items-start space-x-3">
+                    <div class="text-red-400 text-2xl">✓</div>
+                    <div>
+                        <h3 class="text-slate-100 font-semibold mb-1">Pagamento rateale 3x senza interessi</h3>
+                        <p class="text-slate-400 text-sm">Flessibilità di pagamento per tutti i corsi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <!-- Sezione "Progetti" (nuova)
-        <section id="projects" class="mb-10 p-6 rounded-lg bg-slate-700">
-            <h2 class="text-3xl font-bold text-red-400 mb-4 border-b border-red-500 pb-2">Progetti</h2>
-            <p class="text-slate-200 leading-relaxed">
-             </p>
-        </section> -->
-
+        <!-- Sezione Condizioni -->
+        <section id="terms" class="p-6 rounded-lg bg-slate-700/50 border border-slate-600">
+            <h3 class="text-xl font-cyber font-bold text-red-400 mb-4">Condizioni:</h3>
+            <div class="space-y-3 text-slate-300 text-sm">
+                <div class="flex items-start">
+                    <span class="text-red-400 mr-2">•</span>
+                    <p><strong class="text-slate-100">IVA esclusa</strong> (Regime Forfettario 5%)</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-red-400 mr-2">•</span>
+                    <p><strong class="text-slate-100">Rimborso 100%</strong> entro 7 giorni dall'acquisto (pre-inizio)
+                    </p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-red-400 mr-2">•</span>
+                    <p><strong class="text-slate-100">Pagamento:</strong> 50% anticipo + 50% inizio (o 3 rate)</p>
+                </div>
+                <div class="flex items-start">
+                    <span class="text-red-400 mr-2">•</span>
+                    <p><strong class="text-slate-100">Lezioni private:</strong> 24h preavviso cancellazione</p>
+                </div>
+            </div>
+            <div class="mt-4 pt-4 border-t border-slate-600">
+                <p class="text-slate-400 text-sm italic">
+                    <strong class="text-red-300">Focus:</strong> Formazione pratica, non certificazioni ufficiali.
+                </p>
+            </div>
+        </section>
 
     </div>
-    
 
 
 
-    
-    
+
+
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <div class="text-3xl font-cyber font-black mb-4 text-accent glitch-text" data-text="Stefano Carrara">Stefano Carrara</div>
+                <div class="text-3xl font-cyber font-black mb-4 text-accent glitch-text" data-text="Stefano Carrara">
+                    Stefano Carrara</div>
                 <p class="text-gray-400 mb-6">IT Professional & Cybersecurity Expert</p>
                 <div class="flex justify-center space-x-6 mb-8">
-                    <a href="mailto:stefanocarrara81@gmail.com" class="text-gray-400 hover:text-accent transition-colors">
+                    <a href="mailto:stefanocarrara81@gmail.com"
+                        class="text-gray-400 hover:text-accent transition-colors">
                         <i data-lucide="mail" class="w-6 h-6"></i>
                     </a>
                     <a href="tel:+393518802223" class="text-gray-400 hover:text-accent transition-colors">
@@ -172,14 +399,14 @@
                 </div>
                 <div class="border-t border-gray-800 pt-8">
                     <p class="text-gray-400">© 2025 Stefano Carrara. Tutti i diritti riservati. Partita Iva:02975610847
-</p>
+                    </p>
                 </div>
             </div>
         </div>
     </footer>
 
-        <!-- Script per la gestione del menu mobile e l'inizializzazione delle icone -->
-   <script>
+    <!-- Script per la gestione del menu mobile e l'inizializzazione delle icone -->
+    <script>
         // Initialize Lucide icons
         lucide.createIcons();
 
@@ -263,5 +490,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
