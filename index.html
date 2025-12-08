@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="it" class="scroll-smooth">
 <html lang="it" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,63 +35,78 @@
         .gradient-bg {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
         }
+
         .cyber-bg {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
         }
+
         .tech-pattern {
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
         .-bg {
             background-image: url('https://wallpaperswide.com/download/red_kali_dragon-wallpaper-1920x1080.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+
         .card-hover {
             transition: all 0.3s ease;
         }
+
         .card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.1), 0 10px 10px -5px rgba(220, 38, 38, 0.04);
         }
+
         .skill-bar {
             transition: width 2s ease-in-out;
         }
+
         .timeline-item {
             opacity: 0;
             transform: translateX(-50px);
             animation: slideIn 0.6s ease forwards;
         }
+
         .timeline-item:nth-child(even) {
             transform: translateX(50px);
         }
+
         @keyframes slideIn {
             to {
                 opacity: 1;
                 transform: translateX(0);
             }
         }
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             animation: fadeInUp 0.8s ease forwards;
         }
+
         @keyframes fadeInUp {
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
+
         .hero-text {
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
+
         .cyber-glow {
             box-shadow: 0 0 20px rgba(220, 38, 38, 0.3);
         }
+
         .cyber-border {
             border: 2px solid #dc2626;
             position: relative;
         }
+
         .cyber-border::before {
             content: '';
             position: absolute;
@@ -102,7 +118,7 @@
             z-index: -1;
             border-radius: inherit;
         }
-        
+
         /* Services Table Styles */
         .service-table {
             width: 100%;
@@ -111,9 +127,11 @@
             overflow: hidden;
             border-radius: 12px;
         }
+
         .service-table thead {
             background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
         }
+
         .service-table th {
             padding: 16px;
             text-align: left;
@@ -121,22 +139,27 @@
             color: white;
             border-bottom: 2px solid #dc2626;
         }
+
         .service-table tbody tr {
             background: white;
             transition: all 0.3s ease;
         }
+
         .service-table tbody tr:hover {
             background: #fef2f2;
             transform: translateX(5px);
             box-shadow: -5px 0 0 0 #dc2626;
         }
+
         .service-table td {
             padding: 20px 16px;
             border-bottom: 1px solid #e5e7eb;
         }
+
         .service-table tbody tr:last-child td {
             border-bottom: none;
         }
+
         .service-badge {
             display: inline-block;
             padding: 4px 12px;
@@ -147,21 +170,24 @@
             font-weight: 600;
             margin: 2px;
         }
+
         .service-price {
             font-size: 1.5rem;
             font-weight: 700;
             color: #dc2626;
         }
+
         .service-duration {
             color: #6b7280;
             font-size: 0.875rem;
         }
-        
+
         /* Mobile responsive */
         @media (max-width: 768px) {
             .service-table {
                 display: none;
             }
+
             .service-card {
                 display: block;
                 background: white;
@@ -172,37 +198,45 @@
                 border-left: 4px solid #dc2626;
                 transition: all 0.3s ease;
             }
+
             .service-card:hover {
                 transform: translateY(-5px);
                 box-shadow: 0 10px 15px -3px rgba(220, 38, 38, 0.2);
             }
         }
+
         @media (min-width: 769px) {
             .service-card {
                 display: none;
             }
         }
-        
     </style>
 </head>
+
 <body class="font-sans text-gray-800">
     <!-- Navigation -->
     <nav class="fixed w-full bg-slate-900/95 backdrop-blur-sm z-50 shadow-lg border-b border-accent/20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center py-4">
                 <div class="text-3xl font-cyber font-black text-accent glitch-text" data-text="SC">
-  <span style="color: white;">S</span>C
-</div>
+                    <span style="color: white;">S</span>C
+                </div>
 
                 <div class="hidden md:flex space-x-8">
                     <a href="#home" class="text-gray-300 hover:text-accent transition-colors font-medium">Home</a>
                     <a href="#about" class="text-gray-300 hover:text-accent transition-colors font-medium">Chi Sono</a>
-                    <a href="#skills" class="text-gray-300 hover:text-accent transition-colors font-medium">Competenze</a>
-                    <a href="#experience" class="text-gray-300 hover:text-accent transition-colors font-medium">Esperienza</a>
-                    <a href="#projects" class="text-gray-300 hover:text-accent transition-colors font-medium">Progetti</a>
-                    <a href="#services" class="text-gray-300 hover:text-accent transition-colors font-medium">Servizi</a>
-                    <a href="cyber.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Cyber Academy</a>
-                    <a href="#contact" class="text-gray-300 hover:text-accent transition-colors font-medium">Contatti</a>
+                    <a href="#skills"
+                        class="text-gray-300 hover:text-accent transition-colors font-medium">Competenze</a>
+                    <a href="#experience"
+                        class="text-gray-300 hover:text-accent transition-colors font-medium">Esperienza</a>
+                    <a href="#projects"
+                        class="text-gray-300 hover:text-accent transition-colors font-medium">Progetti</a>
+                    <a href="#services"
+                        class="text-gray-300 hover:text-accent transition-colors font-medium">Servizi</a>
+                    <a href="cyber.html" class="text-gray-300 hover:text-accent transition-colors font-medium">Cyber
+                        Academy</a>
+                    <a href="#contact"
+                        class="text-gray-300 hover:text-accent transition-colors font-medium">Contatti</a>
                 </div>
                 <button id="mobile-menu-btn" class="md:hidden text-gray-300">
                     <i data-lucide="menu" class="w-6 h-6"></i>
@@ -237,14 +271,17 @@
                         IT Professional & Cybersecurity Expert
                     </p>
                     <p class="text-lg mb-8 text-gray-200 leading-relaxed hero-text">
-                        Sviluppatore Full Stack, Esperto di Sicurezza Informatica e Formatore con esperienza nel settore IT
+                        Sviluppatore Full Stack, Esperto di Sicurezza Informatica e Formatore con esperienza nel settore
+                        IT
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="#contact" class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
+                        <a href="#contact"
+                            class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
                             <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
                             Contattami
                         </a>
-                        <a href="#about" class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
+                        <a href="#about"
+                            class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
                             <i data-lucide="user" class="w-5 h-5 mr-2"></i>
                             Scopri di più
                         </a>
@@ -268,26 +305,26 @@
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
                     Professionista IT con una passione per l'innovazione tecnologica e la cybersecurity
                 </p>
-        </div>
-            
+            </div>
+
             <div class="grid lg:grid-cols-2 gap-12 items-center">
                 <div class="fade-in">
                     <h3 class="text-2xl font-bold text-gray-900 mb-6">Il Mio Percorso</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Con oltre 15 anni di esperienza nel settore tecnologico. 
-                        La mia carriera spazia dallo sviluppo web alla cybersecurity, dalla formazione professionale 
+                        Con oltre 15 anni di esperienza nel settore tecnologico.
+                        La mia carriera spazia dallo sviluppo web alla cybersecurity, dalla formazione professionale
                         all'amministrazione di sistemi complessi.
                     </p>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Nel 2020 ho fondato Tech's Srls, una società innovativa dedicata alla ricerca e sviluppo 
-                        di soluzioni tecnologiche avanzate. Il nostro progetto è stato presentato presso la BIAT 
+                        Nel 2020 ho fondato Tech's Srls, una società innovativa dedicata alla ricerca e sviluppo
+                        di soluzioni tecnologiche avanzate. Il nostro progetto è stato presentato presso la BIAT
                         (Borsa dell'Innovazione e dell'Alta Tecnologia) riscuotendo notevole interesse.
                     </p>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        Attualmente mi dedico alla formazione professionale, trasmettendo le mie competenze 
+                        Attualmente mi dedico alla formazione professionale, trasmettendo le mie competenze
                         in programmazione, cybersecurity e sviluppo web a centinaia di studenti.
                     </p>
-                    
+
                     <div class="grid grid-cols-2 gap-6">
                         <div class="text-center p-4 bg-white rounded-lg shadow-sm border-l-4 border-accent">
                             <div class="text-3xl font-bold text-accent mb-2">15+</div>
@@ -299,7 +336,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="grid grid-cols-1 gap-6 fade-in">
                     <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-primary">
                         <div class="flex items-center mb-4">
@@ -308,9 +345,10 @@
                             </div>
                             <h4 class="text-xl font-semibold text-gray-900">Sviluppo Software</h4>
                         </div>
-                        <p class="text-gray-600">Esperto in Python, Java, JavaScript, HTML/CSS e framework moderni per lo sviluppo di applicazioni web e mobile.</p>
+                        <p class="text-gray-600">Esperto in Python, Java, JavaScript, HTML/CSS e framework moderni per
+                            lo sviluppo di applicazioni web e mobile.</p>
                     </div>
-                    
+
                     <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-accent">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center mr-4">
@@ -318,9 +356,10 @@
                             </div>
                             <h4 class="text-xl font-semibold text-gray-900">Cybersecurity</h4>
                         </div>
-                        <p class="text-gray-600">Certificato in Ethical Hacking essentials e Web Forensics, specializzato nella protezione di sistemi e dati aziendali.</p>
+                        <p class="text-gray-600">Certificato in Ethical Hacking essentials e Web Forensics,
+                            specializzato nella protezione di sistemi e dati aziendali.</p>
                     </div>
-                    
+
                     <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-secondary">
                         <div class="flex items-center mb-4">
                             <div class="w-12 h-12 bg-secondary/10 rounded-lg flex items-center justify-center mr-4">
@@ -328,7 +367,8 @@
                             </div>
                             <h4 class="text-xl font-semibold text-gray-900">Formazione</h4>
                         </div>
-                        <p class="text-gray-600">Docente esperto in corsi di programmazione, cybersecurity,sistemista linux e sviluppo web per enti di formazione accreditati.</p>
+                        <p class="text-gray-600">Docente esperto in corsi di programmazione, cybersecurity,sistemista
+                            linux e sviluppo web per enti di formazione accreditati.</p>
                     </div>
                 </div>
             </div>
@@ -347,7 +387,8 @@
 
             <div class="grid lg:grid-cols-3 gap-8">
                 <!-- Programming Languages -->
-                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl fade-in border border-primary/20">
+                <div
+                    class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl fade-in border border-primary/20">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="code-2" class="w-6 h-6 text-white"></i>
@@ -431,7 +472,8 @@
                 </div>
 
                 <!-- Frameworks & Tools -->
-                <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-xl fade-in border border-secondary/20">
+                <div
+                    class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-xl fade-in border border-secondary/20">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="layers" class="w-6 h-6 text-white"></i>
@@ -439,31 +481,38 @@
                         <h3 class="text-2xl font-bold text-gray-900">Framework & Tools</h3>
                     </div>
                     <div class="space-y-4">
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">Spring Boot</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">Django</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">Angular</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">Vaadin</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">Flask</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">Bootstrap</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
+                        <div
+                            class="flex items-center justify-between p-3 bg-white rounded-lg border border-secondary/20">
                             <span class="font-semibold">NodeJS</span>
                             <div class="w-3 h-3 bg-secondary rounded-full"></div>
                         </div>
@@ -471,7 +520,8 @@
                 </div>
 
                 <!-- Cybersecurity & Systems -->
-                <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl fade-in border border-accent/20">
+                <div
+                    class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl fade-in border border-accent/20">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="shield-check" class="w-6 h-6 text-white"></i>
@@ -526,22 +576,30 @@
             <div class="relative">
                 <!-- Timeline line -->
                 <div class="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-accent/30"></div>
-                
+
                 <div class="space-y-12">
                     <!-- Formazione Continua 2024-2025 (Destra) -->
                     <div class="timeline-item relative flex items-center fade-in" style="animation-delay: 0s;">
                         <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-green-500 rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-green-500">
                                 <div class="text-sm text-green-600 font-semibold mb-2">2024 - 2025</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Formazione Continua Specialistica</h3>
-                                <p class="text-gray-600 mb-4">Cybersecurity (multipli corsi), Java/Spring Boot, Web Data Scientist, sistemista Linux, IT Technical Support, Reti e Server, Marketing Digitale.</p>
+                                <p class="text-gray-600 mb-4">Cybersecurity (multipli corsi), Java/Spring Boot, Web Data
+                                    Scientist, sistemista Linux, IT Technical Support, Reti e Server, Marketing
+                                    Digitale.</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Cybersecurity</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Data Science</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Spring Boot</span>
-                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Marketing</span>
+                                    <span
+                                        class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Cybersecurity</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Data
+                                        Science</span>
+                                    <span class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Spring
+                                        Boot</span>
+                                    <span
+                                        class="px-3 py-1 bg-green-100 text-green-600 text-sm rounded-full">Marketing</span>
                                 </div>
                             </div>
                         </div>
@@ -553,32 +611,43 @@
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-r-4 border-accent">
                                 <div class="text-sm text-accent font-semibold mb-2">2023 - 2024</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Docente Formazione Avanzata</h3>
-                                <p class="text-gray-600 mb-4">Docenza in corsi specialistici: Programmatore Python, Android con Java, Cybersecurity, Sistemista Informatico.</p>
+                                <p class="text-gray-600 mb-4">Docenza in corsi specialistici: Programmatore Python,
+                                    Android con Java, Cybersecurity, Sistemista Informatico.</p>
                                 <div class="flex flex-wrap gap-2 justify-end">
                                     <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Python</span>
                                     <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Android</span>
-                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Cybersecurity</span>
-                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Sistemista</span>
+                                    <span
+                                        class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Cybersecurity</span>
+                                    <span
+                                        class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Sistemista</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8"></div>
                     </div>
 
                     <!-- Teaching Experience 2022-2023 (Destra) -->
                     <div class="timeline-item relative flex items-center fade-in" style="animation-delay: 0.4s;">
                         <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-500 rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-purple-500">
                                 <div class="text-sm text-purple-600 font-semibold mb-2">2022 - 2023</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Docente Tecnico Web &amp; Python</h3>
-                                <p class="text-gray-600 mb-4">Tecnico Produzione Pagine Web, Sviluppatore Python , Cloud Administrator &amp; Security Specialist.</p>
+                                <p class="text-gray-600 mb-4">Tecnico Produzione Pagine Web, Sviluppatore Python , Cloud
+                                    Administrator &amp; Security Specialist.</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Web Development</span>
-                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Python</span>
-                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Cloud</span>
+                                    <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Web
+                                        Development</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Python</span>
+                                    <span
+                                        class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Cloud</span>
                                 </div>
                             </div>
                         </div>
@@ -590,31 +659,42 @@
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-r-4 border-accent">
                                 <div class="text-sm text-accent font-semibold mb-2">2020 - Presente</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Lavoratore Autonomo</h3>
-                                <p class="text-gray-600 mb-4">Sviluppo di soluzioni informatiche, e-commerce,crm, cloud storage e formazione continua per aziende clienti.</p>
+                                <p class="text-gray-600 mb-4">Sviluppo di soluzioni informatiche, e-commerce,crm, cloud
+                                    storage e formazione continua per aziende clienti.</p>
                                 <div class="flex flex-wrap gap-2 justify-end">
-                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">WordPress</span>
-                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">E-commerce</span>
-                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Cloud Solutions</span>
+                                    <span
+                                        class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">WordPress</span>
+                                    <span
+                                        class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">E-commerce</span>
+                                    <span class="px-3 py-1 bg-accent/10 text-accent text-sm rounded-full">Cloud
+                                        Solutions</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8"></div>
                     </div>
 
                     <!-- Formatore Informatico - It Srls (2015-2017) (Destra) -->
                     <div class="timeline-item relative flex items-center fade-in" style="animation-delay: 0.8s;">
                         <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-500 rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-gray-500 rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-gray-500">
                                 <div class="text-sm text-gray-600 font-semibold mb-2">2015 - 2017</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Formatore Informatico - It Srls</h3>
                                 <p class="text-gray-600 mb-4">prototipazione e formazione</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Hardware</span>
-                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Sistemi</span>
-                                    <span class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Training</span>
+                                    <span
+                                        class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Hardware</span>
+                                    <span
+                                        class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Sistemi</span>
+                                    <span
+                                        class="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full">Training</span>
                                 </div>
                             </div>
                         </div>
@@ -626,31 +706,42 @@
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-r-4 border-primary">
                                 <div class="text-sm text-primary font-semibold mb-2">2018 - Presente</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">Amministratore - Tech's Srls</h3>
-                                <p class="text-gray-600 mb-4">Fondatore e amministratore di società innovativa per ricerca e sviluppo. Progetto presentato durante l'evento BIAT con successo.</p>
+                                <p class="text-gray-600 mb-4">Fondatore e amministratore di società innovativa per
+                                    ricerca e sviluppo. Progetto presentato durante l'evento BIAT con successo.</p>
                                 <div class="flex flex-wrap gap-2 justify-end">
-                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Innovation</span>
-                                    <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">R&amp;D</span>
+                                    <span
+                                        class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Innovation</span>
+                                    <span
+                                        class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">R&amp;D</span>
                                     <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">BIAT</span>
                                 </div>
                             </div>
                         </div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8"></div>
                     </div>
 
                     <!-- IT Department - Ascot Ind. (2008-2019) (Destra) -->
                     <div class="timeline-item relative flex items-center fade-in" style="animation-delay: 1.2s;">
                         <div class="flex-1 pr-8"></div>
-                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow"></div>
+                        <div
+                            class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-secondary rounded-full border-4 border-white shadow">
+                        </div>
                         <div class="flex-1 pl-8">
                             <div class="bg-white p-6 rounded-xl shadow-sm card-hover border-l-4 border-secondary">
                                 <div class="text-sm text-secondary font-semibold mb-2">2008 - 2019</div>
                                 <h3 class="text-xl font-bold text-gray-900 mb-2">IT Department - Ascot Ind.</h3>
-                                <p class="text-gray-600 mb-4">help desk, linux, mac os X, window server, active directory, data recovery, backup, network</p>
+                                <p class="text-gray-600 mb-4">help desk, linux, mac os X, window server, active
+                                    directory, data recovery, backup, network</p>
                                 <div class="flex flex-wrap gap-2">
-                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">IT Department</span>
-                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Help Desk</span>
-                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">IT Support</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">IT
+                                        Department</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Help
+                                        Desk</span>
+                                    <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">IT
+                                        Support</span>
                                 </div>
                             </div>
                         </div>
@@ -672,17 +763,20 @@
             </div>
 
             <div class="grid lg:grid-cols-2 gap-8">
-                <div class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl card-hover fade-in border border-primary/20">
+                <div
+                    class="bg-gradient-to-br from-primary/5 to-primary/10 p-8 rounded-xl card-hover fade-in border border-primary/20">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="lightbulb" class="w-6 h-6 text-white"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900">Progetto BIAT 2016</h3>
                     </div>
-                    <img src="443__800x600_1.jpg" alt="Innovation Project" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img src="443__800x600_1.jpg" alt="Innovation Project"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Progettazione di un innovativo sistema di videosorveglianza pubblica presentato 
-                        alla Borsa dell'Innovazione e dell'Alta Tecnologia e al Ministero degli Interni con il capo direttore tecnico della polizia di stato, riscuotendo interesse da parte di investitori 
+                        Progettazione di un innovativo sistema di videosorveglianza pubblica presentato
+                        alla Borsa dell'Innovazione e dell'Alta Tecnologia e al Ministero degli Interni con il capo
+                        direttore tecnico della polizia di stato, riscuotendo interesse da parte di investitori
                         e aziende del settore estere.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
@@ -691,30 +785,35 @@
                         <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">R&D</span>
                     </div>
                     <div class="text-primary font-semibold">
-  <a href="https://www.ice.it/export_sud/catalogo_BIAT_2016.pdf" class="text-primary font-semibold">
-    Catalogo BIAT 2016 (PDF) – ICE Export Sud
-  </a>
-                        <a href="https://www.ice.it/repository/pdf/catalogue_BIAT_2017.pdf" class="text-primary font-semibold">
-    Catalogo BIAT 2017 (PDF) – ICE Export Sud
-  </a>
-                        <a href="https://biat.eventidigitali.ice.it/azienda/techs-s-r-l" class="text-primary font-semibold">
-    BIAT 2020
-  </a>
-</div>
+                        <a href="https://www.ice.it/export_sud/catalogo_BIAT_2016.pdf"
+                            class="text-primary font-semibold">
+                            Catalogo BIAT 2016 (PDF) – ICE Export Sud
+                        </a>
+                        <a href="https://www.ice.it/repository/pdf/catalogue_BIAT_2017.pdf"
+                            class="text-primary font-semibold">
+                            Catalogo BIAT 2017 (PDF) – ICE Export Sud
+                        </a>
+                        <a href="https://biat.eventidigitali.ice.it/azienda/techs-s-r-l"
+                            class="text-primary font-semibold">
+                            BIAT 2020
+                        </a>
+                    </div>
 
-                    
+
                 </div>
 
-                <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl card-hover fade-in border border-accent/20">
+                <div
+                    class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl card-hover fade-in border border-accent/20">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="shield-alert" class="w-6 h-6 text-white"></i>
                         </div>
                         <h3 class="text-2xl font-bold text-gray-900">Cybersecurity Solutions</h3>
                     </div>
-                    <img src="hack.png" alt="Cybersecurity Command Center" class="w-full h-48 object-cover rounded-lg mb-4">
+                    <img src="hack.png" alt="Cybersecurity Command Center"
+                        class="w-full h-48 object-cover rounded-lg mb-4">
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Implementazione di sistemi di sicurezza avanzati, penetration testing e formazione 
+                        Implementazione di sistemi di sicurezza avanzati, penetration testing e formazione
                         specialistica in ethical hacking per aziende e professionisti del settore.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
@@ -725,7 +824,8 @@
                     <div class="text-accent font-semibold">Risultato: 500+ professionisti formati</div>
                 </div>
 
-                <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-xl card-hover fade-in border border-secondary/20">
+                <div
+                    class="bg-gradient-to-br from-secondary/5 to-secondary/10 p-8 rounded-xl card-hover fade-in border border-secondary/20">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="cloud" class="w-6 h-6 text-white"></i>
@@ -734,18 +834,20 @@
                     </div>
                     <img src="cloud.png" alt="Data Center" class="w-full h-48 object-cover rounded-lg mb-4">
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Progettazione e implementazione di soluzioni cloud personalizzate per aziende, 
+                        Progettazione e implementazione di soluzioni cloud personalizzate per aziende,
                         con focus sulla sicurezza dei dati e l'accessibilità remota.
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Cloud Architecture</span>
+                        <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Cloud
+                            Architecture</span>
                         <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Data Security</span>
                         <span class="px-3 py-1 bg-secondary/10 text-secondary text-sm rounded-full">Remote Access</span>
                     </div>
                     <div class="text-secondary font-semibold">Impatto: Efficienza aziendale +40%</div>
                 </div>
 
-                <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl card-hover fade-in border border-purple-200">
+                <div
+                    class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-xl card-hover fade-in border border-purple-200">
                     <div class="flex items-center mb-6">
                         <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center mr-4">
                             <i data-lucide="shopping-cart" class="w-6 h-6 text-white"></i>
@@ -754,14 +856,16 @@
                     </div>
                     <img src="code.png" alt="E-commerce Development" class="w-full h-48 object-cover rounded-lg mb-4">
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Sviluppo di piattaforme e-commerce complete utilizzando WordPress, Joomla e PrestaShop, con integrazione di sistemi di pagamento sicuri e gestione avanzata dell'inventario.
+                        Sviluppo di piattaforme e-commerce complete utilizzando WordPress, Joomla e PrestaShop, con
+                        integrazione di sistemi di pagamento sicuri e gestione avanzata dell'inventario.
                         CRM e siti web per studi legali.
-                       
+
                     </p>
                     <div class="flex flex-wrap gap-2 mb-4">
                         <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">WordPress</span>
                         <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">PrestaShop</span>
-                        <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Payment Systems</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-600 text-sm rounded-full">Payment
+                            Systems</span>
                     </div>
                     <div class="text-purple-600 font-semibold">Risultato: 60+ progetti completati</div>
                 </div>
@@ -787,7 +891,7 @@
                     </div>
                     <h3 class="text-3xl font-bold text-gray-900">Formazione e Sviluppo</h3>
                 </div>
-                
+
                 <!-- Desktop Table -->
                 <div class="overflow-x-auto shadow-lg rounded-xl">
                     <table class="service-table">
@@ -924,166 +1028,225 @@
                 </div>
             </div>
 
-            <!-- Cybersecurity e Pentesting -->
-            <div class="fade-in">
+            <!-- Servizi per Aziende -->
+            <div class="mb-16 fade-in">
                 <div class="flex items-center mb-8">
                     <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
                         <i data-lucide="shield-alert" class="w-6 h-6 text-white"></i>
                     </div>
-                    <h3 class="text-3xl font-bold text-gray-900">Cybersecurity e Pentesting</h3>
+                    <div>
+                        <h3 class="text-3xl font-bold text-gray-900">Servizi per Aziende</h3>
+                        <p class="text-gray-600 text-sm mt-1">Tariffario Cybersecurity 2026</p>
+                    </div>
                 </div>
-                
+
                 <!-- Desktop Table -->
-                <div class="overflow-x-auto shadow-lg rounded-xl">
+                <div class="overflow-x-auto shadow-lg rounded-xl mb-8">
                     <table class="service-table">
                         <thead>
                             <tr>
                                 <th>Servizio</th>
-                                <th>Pacchetto Fisso</th>
+                                <th>Black Box</th>
+                                <th>Grey Box</th>
+                                <th>White Box</th>
                                 <th>Durata</th>
-                                <th>Deliverable Inclusi</th>
+                                <th>Ideale per</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="font-semibold text-gray-900">Vulnerability Scan Base</td>
+                                <td class="font-semibold text-gray-900">Vulnerability Scan</td>
                                 <td><span class="service-price">300€</span></td>
-                                <td><span class="service-duration">6 ore</span></td>
-                                <td>
-                                    <span class="service-badge">Report PDF 10p</span>
-                                    <span class="service-badge">50+ vulnerabilità (CVSS)</span>
-                                    <span class="service-badge">Executive Summary 2p</span>
-                                    <span class="service-badge">Export risultati</span>
-                                </td>
+                                <td><span class="service-price">350€</span></td>
+                                <td><span class="service-price">400€</span></td>
+                                <td><span class="service-duration">6-8h</span></td>
+                                <td>PMI <50 IP</td>
                             </tr>
                             <tr>
                                 <td class="font-semibold text-gray-900">Web App Pentest</td>
                                 <td><span class="service-price">800€</span></td>
-                                <td><span class="service-duration">1 giorno</span></td>
-                                <td>
-                                    <span class="service-badge">Report 15p con screenshot</span>
-                                    <span class="service-badge">OWASP Top10 test</span>
-                                    <span class="service-badge">Exploit demo + remediation</span>
-                                    <span class="service-badge">Priorità rischi</span>
-                                </td>
+                                <td><span class="service-price">1.000€</span></td>
+                                <td><span class="service-price">1.200€</span></td>
+                                <td><span class="service-duration">1-2gg</span></td>
+                                <td>E-commerce</td>
                             </tr>
                             <tr>
                                 <td class="font-semibold text-gray-900">Network Pentest</td>
                                 <td><span class="service-price">500€</span></td>
-                                <td><span class="service-duration">8 ore</span></td>
-                                <td>
-                                    <span class="service-badge">Scan completo <50 IP</span>
-                                    <span class="service-badge">Report Nmap dettagliato</span>
-                                    <span class="service-badge">Exploits testati</span>
-                                    <span class="service-badge">Remediation plan</span>
-                                </td>
+                                <td><span class="service-price">700€</span></td>
+                                <td><span class="service-price">900€</span></td>
+                                <td><span class="service-duration">8-12h</span></td>
+                                <td>Uffici aziendali</td>
                             </tr>
                             <tr>
-                                <td class="font-semibold text-gray-900">Full Pentest (Web+Network)</td>
+                                <td class="font-semibold text-gray-900">Full Pentest</td>
                                 <td><span class="service-price">1.500€</span></td>
-                                <td><span class="service-duration">3 giorni</span></td>
-                                <td>
-                                    <span class="service-badge">Report executive 25p</span>
-                                    <span class="service-badge">Video demo attacchi</span>
-                                    <span class="service-badge">Risk matrix</span>
-                                    <span class="service-badge">30gg follow-up</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="font-semibold text-gray-900">Remediation Consulting</td>
-                                <td><span class="service-price">200€</span></td>
-                                <td><span class="service-duration">4 ore</span></td>
-                                <td>
-                                    <span class="service-badge">Verifica fix vulnerabilità</span>
-                                    <span class="service-badge">Seconda scansione</span>
-                                    <span class="service-badge">Certificato sicurezza</span>
-                                </td>
+                                <td><span class="service-price">2.000€</span></td>
+                                <td><span class="service-price">2.500€</span></td>
+                                <td><span class="service-duration">3-5gg</span></td>
+                                <td>Aziende medie NIS2</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <!-- Mobile Cards -->
-                <div class="mobile-cards">
+                <div class="mobile-cards mb-8">
                     <div class="service-card">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Vulnerability Scan Base</h4>
-                        <div class="mb-3">
-                            <span class="service-price">300€</span>
-                            <span class="service-duration ml-3">• 6 ore</span>
+                        <h4 class="text-xl font-bold text-gray-900 mb-3">Vulnerability Scan</h4>
+                        <div class="grid grid-cols-3 gap-2 mb-3">
+                            <div>
+                                <div class="text-xs text-gray-600 mb-1">Black Box</div>
+                                <span class="service-price text-base">300€</span>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-600 mb-1">Grey Box</div>
+                                <span class="service-price text-base">350€</span>
+                            </div>
+                            <div>
+                                <div class="text-xs text-gray-600 mb-1">White Box</div>
+                                <span class="service-price text-base">400€</span>
+                            </div>
                         </div>
-                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
-                        <span class="service-badge">Report PDF 10p</span>
-                        <span class="service-badge">50+ vulnerabilità (CVSS)</span>
-                        <span class="service-badge">Executive Summary 2p</span>
-                        <span class="service-badge">Export risultati</span>
-                    </div>
-                    <div class="service-card">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Web App Pentest</h4>
-                        <div class="mb-3">
-                            <span class="service-price">800€</span>
-                            <span class="service-duration ml-3">• 1 giorno</span>
+                        <div class="text-sm text-gray-700">
+                            <strong>Durata:</strong> <span class="service-duration">6-8h</span><br>
+                            <strong>Ideale per:</strong> PMI <50 IP </div>
                         </div>
-                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
-                        <span class="service-badge">Report 15p con screenshot</span>
-                        <span class="service-badge">OWASP Top10 test</span>
-                        <span class="service-badge">Exploit demo + remediation</span>
-                        <span class="service-badge">Priorità rischi</span>
-                    </div>
-                    <div class="service-card">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Network Pentest</h4>
-                        <div class="mb-3">
-                            <span class="service-price">500€</span>
-                            <span class="service-duration ml-3">• 8 ore</span>
+                        <div class="service-card">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Web App Pentest</h4>
+                            <div class="grid grid-cols-3 gap-2 mb-3">
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">Black Box</div>
+                                    <span class="service-price text-base">800€</span>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">Grey Box</div>
+                                    <span class="service-price text-base">1.000€</span>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">White Box</div>
+                                    <span class="service-price text-base">1.200€</span>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Durata:</strong> <span class="service-duration">1-2gg</span><br>
+                                <strong>Ideale per:</strong> E-commerce
+                            </div>
                         </div>
-                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
-                        <span class="service-badge">Scan completo <50 IP</span>
-                        <span class="service-badge">Report Nmap dettagliato</span>
-                        <span class="service-badge">Exploits testati</span>
-                        <span class="service-badge">Remediation plan</span>
-                    </div>
-                    <div class="service-card">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Full Pentest (Web+Network)</h4>
-                        <div class="mb-3">
-                            <span class="service-price">1.500€</span>
-                            <span class="service-duration ml-3">• 3 giorni</span>
+                        <div class="service-card">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Network Pentest</h4>
+                            <div class="grid grid-cols-3 gap-2 mb-3">
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">Black Box</div>
+                                    <span class="service-price text-base">500€</span>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">Grey Box</div>
+                                    <span class="service-price text-base">700€</span>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">White Box</div>
+                                    <span class="service-price text-base">900€</span>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Durata:</strong> <span class="service-duration">8-12h</span><br>
+                                <strong>Ideale per:</strong> Uffici aziendali
+                            </div>
                         </div>
-                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
-                        <span class="service-badge">Report executive 25p</span>
-                        <span class="service-badge">Video demo attacchi</span>
-                        <span class="service-badge">Risk matrix</span>
-                        <span class="service-badge">30gg follow-up</span>
-                    </div>
-                    <div class="service-card">
-                        <h4 class="text-xl font-bold text-gray-900 mb-2">Remediation Consulting</h4>
-                        <div class="mb-3">
-                            <span class="service-price">200€</span>
-                            <span class="service-duration ml-3">• 4 ore</span>
+                        <div class="service-card">
+                            <h4 class="text-xl font-bold text-gray-900 mb-3">Full Pentest</h4>
+                            <div class="grid grid-cols-3 gap-2 mb-3">
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">Black Box</div>
+                                    <span class="service-price text-base">1.500€</span>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">Grey Box</div>
+                                    <span class="service-price text-base">2.000€</span>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-gray-600 mb-1">White Box</div>
+                                    <span class="service-price text-base">2.500€</span>
+                                </div>
+                            </div>
+                            <div class="text-sm text-gray-700">
+                                <strong>Durata:</strong> <span class="service-duration">3-5gg</span><br>
+                                <strong>Ideale per:</strong> Aziende medie NIS2
+                            </div>
                         </div>
-                        <div class="mb-2 text-sm font-semibold text-gray-700">Deliverable:</div>
-                        <span class="service-badge">Verifica fix vulnerabilità</span>
-                        <span class="service-badge">Seconda scansione</span>
-                        <span class="service-badge">Certificato sicurezza</span>
                     </div>
-                </div>
-            </div>
 
-            <!-- Call to Action -->
-            <div class="mt-16 text-center fade-in">
-                <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl border border-accent/20">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Interessato ai nostri servizi?</h3>
-                    <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-                        Contattami per discutere le tue esigenze e ricevere un preventivo personalizzato. 
-                        Tutti i pacchetti possono essere adattati alle specifiche necessità del cliente.
-                    </p>
-                    <a href="#contact" class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
-                        <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
-                        Richiedi Preventivo
-                    </a>
+                    <!-- Spiegazione Box di Test -->
+                    <div class="bg-gradient-to-br from-gray-50 to-gray-100 p-6 rounded-xl border border-gray-200">
+                        <h4 class="text-2xl font-bold text-gray-900 mb-6 text-center">Cosa sono i Box di Test?</h4>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <!-- Black Box -->
+                            <div class="bg-white p-5 rounded-lg border-l-4 border-gray-800 shadow-sm">
+                                <h5 class="text-lg font-bold text-gray-900 mb-3">Black Box</h5>
+                                <div class="space-y-2 text-sm text-gray-700">
+                                    <p><strong class="text-accent">Prezzi base</strong><br>300-1.500€</p>
+                                    <p>✗ No credenziali</p>
+                                    <p>👁️ Prospettiva hacker esterno</p>
+                                    <p>🎯 Simula attacco reale</p>
+                                    <div class="mt-4 pt-3 border-t border-gray-200">
+                                        <p class="font-semibold text-gray-900">Vantaggio:</p>
+                                        <p>Rapido, realistico</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Grey Box -->
+                            <div class="bg-white p-5 rounded-lg border-l-4 border-gray-500 shadow-sm">
+                                <h5 class="text-lg font-bold text-gray-900 mb-3">Grey Box</h5>
+                                <div class="space-y-2 text-sm text-gray-700">
+                                    <p><strong class="text-accent">Prezzi intermedi</strong><br>350-2.000€</p>
+                                    <p>🔑 Credenziali limitate</p>
+                                    <p>👤 Prospettiva utente interno</p>
+                                    <p>📂 Accesso parziale sistemi</p>
+                                    <div class="mt-4 pt-3 border-t border-gray-200">
+                                        <p class="font-semibold text-gray-900">Vantaggio:</p>
+                                        <p>Bilanciato costo/profondità</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- White Box -->
+                            <div class="bg-white p-5 rounded-lg border-l-4 border-accent shadow-sm">
+                                <h5 class="text-lg font-bold text-gray-900 mb-3">White Box</h5>
+                                <div class="space-y-2 text-sm text-gray-700">
+                                    <p><strong class="text-accent">Prezzi completi</strong><br>400-2.500€</p>
+                                    <p>🔓 Accesso totale</p>
+                                    <p>💻 Analisi codice + configurazione</p>
+                                    <p>🔍 Test esaustivo</p>
+                                    <div class="mt-4 pt-3 border-t border-gray-200">
+                                        <p class="font-semibold text-gray-900">Vantaggio:</p>
+                                        <p>Massima copertura vulnerabilità</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="mt-16 text-center fade-in">
+                    <div class="bg-gradient-to-br from-accent/5 to-accent/10 p-8 rounded-xl border border-accent/20">
+                        <h3 class="text-2xl font-bold text-gray-900 mb-4">Interessato ai nostri servizi?</h3>
+                        <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
+                            Contattami per discutere le tue esigenze e ricevere un preventivo personalizzato.
+                            Tutti i pacchetti possono essere adattati alle specifiche necessità del cliente.
+                        </p>
+                        <a href="#contact"
+                            class="bg-accent hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
+                            <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
+                            Richiedi Preventivo
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
     </section>
- 
+
     <!-- Contenitore principale della griglia -->
     <div class="container mx-auto">
         <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Certificati e Attestati</h1>
@@ -1092,86 +1255,132 @@
         <div class="grid gap-6 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
 
             <!-- Le carte dei certificati fornite dall'utente -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="1.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 1" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="1.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 1" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="2.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 2" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="2.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 2" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="3.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 3" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="3.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 3" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="4.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 4" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="4.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 4" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="5.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 5" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="5.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 5" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="6.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 6" class="certificate-image w-full h-auto object-cover">
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="7.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 7" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="6.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 6" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="8.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 8" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="7.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 7" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="cisco.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 9" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="8.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 8" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="10.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 10" class="certificate-image w-full h-auto object-cover">
-            </div>
-            
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="11.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 11" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="cisco.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 9" class="certificate-image w-full h-auto object-cover">
             </div>
 
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="12.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="10.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 10" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="CISCO-H.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="11.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 11" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="FORTINET.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="12.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="ISO27001.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="CISCO-H.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="LINUX.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="FORTINET.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="HPAI.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="ISO27001.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="HPIT.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="LINUX.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="PALO.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="HPAI.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="mitre.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="HPIT.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="isc2.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="PALO.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="ISC2FINE.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="mitre.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
-                <img src="ISC2CYBER.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';" alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="isc2.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="ISC2FINE.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
+            </div>
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
+                <img src="ISC2CYBER.png" onerror="this.onerror=null;this.src='https://placehold.co/600x400';"
+                    alt="Certificato 12" class="certificate-image w-full h-auto object-cover">
             </div>
         </div>
     </div>
@@ -1180,11 +1389,13 @@
     <div id="image-modal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4 z-50 hidden">
         <div class="relative w-full h-full max-w-5xl max-h-5xl">
             <!-- Pulsante di chiusura -->
-            <button class="absolute top-4 right-4 text-white text-3xl font-bold cursor-pointer hover:text-gray-300" onclick="closeModal()">
+            <button class="absolute top-4 right-4 text-white text-3xl font-bold cursor-pointer hover:text-gray-300"
+                onclick="closeModal()">
                 &times;
             </button>
             <!-- Immagine ingrandita -->
-            <img id="modal-image" src="" alt="Certificato ingrandito" class="max-w-full max-h-full rounded-lg shadow-xl mx-auto">
+            <img id="modal-image" src="" alt="Certificato ingrandito"
+                class="max-w-full max-h-full rounded-lg shadow-xl mx-auto">
         </div>
     </div>
 
@@ -1243,7 +1454,7 @@
                 <div class="fade-in">
                     <div class="bg-white/10 backdrop-blur-sm p-8 rounded-xl border border-accent/30">
                         <h3 class="text-2xl font-bold text-white mb-6">Informazioni di Contatto</h3>
-                        
+
                         <div class="space-y-6">
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
@@ -1254,7 +1465,7 @@
                                     <div class="text-white font-semibold">stefanocarrara81@gmail.com</div>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
                                     <i data-lucide="phone" class="w-6 h-6 text-white"></i>
@@ -1264,7 +1475,7 @@
                                     <div class="text-white font-semibold">(+39) 351 880 2223</div>
                                 </div>
                             </div>
-                            
+
                             <div class="flex items-center">
                                 <div class="w-12 h-12 bg-accent rounded-lg flex items-center justify-center mr-4">
                                     <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
@@ -1289,11 +1500,13 @@
                         <div class="mt-8 pt-8 border-t border-white/20">
                             <h4 class="text-lg font-semibold text-white mb-4">Contattami direttamente</h4>
                             <div class="flex flex-col sm:flex-row gap-4">
-                                <a href="mailto:stefanocarrara81@gmail.com" class="bg-accent hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
+                                <a href="mailto:stefanocarrara81@gmail.com"
+                                    class="bg-accent hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center cyber-glow">
                                     <i data-lucide="mail" class="w-5 h-5 mr-2"></i>
                                     Invia Email
                                 </a>
-                                <a href="tel:+393518802223" class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
+                                <a href="tel:+393518802223"
+                                    class="border-2 border-accent text-accent hover:bg-accent hover:text-white px-6 py-3 rounded-lg font-semibold transition-all inline-flex items-center justify-center">
                                     <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
                                     Chiama Ora
                                 </a>
@@ -1305,14 +1518,16 @@
         </div>
     </section>
 
-    
+
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <div class="text-3xl font-cyber font-black mb-4 text-accent glitch-text" data-text="Stefano Carrara">Stefano Carrara</div>
+                <div class="text-3xl font-cyber font-black mb-4 text-accent glitch-text" data-text="Stefano Carrara">
+                    Stefano Carrara</div>
                 <p class="text-gray-400 mb-6">IT Professional & Cybersecurity Expert</p>
                 <div class="flex justify-center space-x-6 mb-8">
-                    <a href="mailto:stefanocarrara81@gmail.com" class="text-gray-400 hover:text-accent transition-colors">
+                    <a href="mailto:stefanocarrara81@gmail.com"
+                        class="text-gray-400 hover:text-accent transition-colors">
                         <i data-lucide="mail" class="w-6 h-6"></i>
                     </a>
                     <a href="tel:+393518802223" class="text-gray-400 hover:text-accent transition-colors">
@@ -1320,7 +1535,8 @@
                     </a>
                 </div>
                 <div class="border-t border-gray-800 pt-8">
-                    <p class="text-gray-400">© 2025 Stefano Carrara. Tutti i diritti riservati.Partita Iva:02975610847</p>
+                    <p class="text-gray-400">© 2025 Stefano Carrara. Tutti i diritti riservati.Partita Iva:02975610847
+                    </p>
                 </div>
             </div>
         </div>
@@ -1410,5 +1626,5 @@
         });
     </script>
 </body>
-</html>
 
+</html>
